@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidade com navegadores antigos -->
+    <meta name="author" content="Padilha Advogados e Associados">
+    <meta name="description" content="Fale conosco da Padilha Advogados e Associados. Entre em contato para mais informações sobre nossos serviços.">
+    <meta name="keywords" content="contato, advogados, serviços jurídicos, Padilha Advogados">
+    <title>Fale Conosco - Padilha Advogados e Associados</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body class="bg-gray-100">
+    <div class="relative">
+        <!-- Navbar -->
+        <nav class="bg-[#6F2C3E] text-white shadow-lg z-50 relative">
+          <div class="container mx-auto px-6 flex justify-between items-center h-16">
+            <a href="#" class="text-3xl font-bold text-yellow-400 hover:text-yellow-500">
+              Padilha Advogados
+            </a>
+            <div class="hidden md:flex space-x-8">
+              <a href="http://localhost:3000" class="hover:text-yellow-500 transition">Início</a>
+              <a href="/html/about.html" class="hover:text-yellow-500 transition">Sobre Nós</a>
+              <a href="/html/services.html" class="hover:text-yellow-500 transition">Serviços</a>
+              <a href="#fale-conosco" class="hover:text-yellow-500 transition">Fale Conosco</a> <!-- Link para Fale Conosco -->
+            </div>
+          </div>
+        </nav>
+
+        <!-- Seção Fale Conosco -->
+        <section id="fale-conosco" class="pt-16 pb-12 px-4 text-center">
+          <h2 class="text-4xl font-semibold text-gray-800 mb-4">Fale Conosco</h2>
+          <p class="text-lg text-gray-600 mb-6">Tem dúvidas ou quer saber mais sobre nossos serviços? Entre em contato conosco preenchendo o formulário abaixo ou pelos nossos canais de comunicação.</p>
+        
+          <div class="max-w-screen-md mx-auto bg-white p-8 rounded-lg shadow-lg">
+            <!-- Formulário de Contato -->
+            <form action="/enviar-email" method="POST">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="nome" class="block text-left text-lg font-semibold text-gray-700">Nome</label>
+                  <input type="text" id="nome" name="nome" class="mt-2 p-3 w-full border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#6F2C3E]" required>
+                </div>
+                <div>
+                  <label for="email" class="block text-left text-lg font-semibold text-gray-700">E-mail</label>
+                  <input type="email" id="email" name="email" class="mt-2 p-3 w-full border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#6F2C3E]" required>
+                </div>
+              </div>
+        
+              <div class="mt-6">
+                <label for="mensagem" class="block text-left text-lg font-semibold text-gray-700">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" class="mt-2 p-3 w-full border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#6F2C3E]" required></textarea>
+              </div>
+        
+              <div class="mt-6">
+                <button type="submit" class="w-full bg-[#6F2C3E] text-white p-3 rounded-lg hover:bg-[#6F2C3E] transition">Enviar Mensagem</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        
+
+          <!-- Canais de Comunicação -->
+          <div class="mt-12">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Nossos Canais de Comunicação</h3>
+            <div class="flex justify-center space-x-6">
+              <a href="https://wa.me/55999999999" class="text-green-500 hover:text-green-600 text-3xl">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="https://www.instagram.com/padilha_advogados" class="text-pink-500 hover:text-pink-600 text-3xl">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/padilhaadvogados" class="text-blue-600 hover:text-blue-700 text-3xl">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="mailto:contato@padilhaadvogados.com" class="text-gray-600 hover:text-gray-700 text-3xl">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+    </div>
+</body>
+</html>
