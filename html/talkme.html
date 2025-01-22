@@ -13,6 +13,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" href="/img/img-logo-nova-guia-dourado.png" type="image/x-icon">
 </head>
 <body class="bg-gray-100">
     <div class="relative">
@@ -23,10 +24,10 @@
               Padilha Advogados
             </a>
             <div class="hidden md:flex space-x-8">
-              <a href="http://localhost:3000" class="hover:text-yellow-500 transition">Início</a>
-              <a href="/html/about.html" class="hover:text-yellow-500 transition">Sobre Nós</a>
-              <a href="/html/services.html" class="hover:text-yellow-500 transition">Serviços</a>
-              <a href="#fale-conosco" class="hover:text-yellow-500 transition">Fale Conosco</a> <!-- Link para Fale Conosco -->
+              <a href="http://localhost:3000/#home" class="hover:text-yellow-500 transition">Início</a>
+              <a href="http://localhost:3000/sobre" class="hover:text-yellow-500 transition">Sobre Nós</a>
+              <a href="http://localhost:3000/html/services.html" class="hover:text-yellow-500 transition">Serviços</a>
+              <a href="http://localhost:3000/html/talkme.html" class="hover:text-yellow-500 transition">Fale Conosco</a> <!-- Link para Fale Conosco -->
             </div>
           </div>
         </nav>
@@ -38,7 +39,7 @@
         
           <div class="max-w-screen-md mx-auto bg-white p-8 rounded-lg shadow-lg">
             <!-- Formulário de Contato -->
-            <form action="/enviar-email" method="POST">
+            <form action="/enviar-email" method="POST" enctype="multipart/form-data">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label for="nome" class="block text-left text-lg font-semibold text-gray-700">Nome</label>
@@ -49,19 +50,30 @@
                   <input type="email" id="email" name="email" class="mt-2 p-3 w-full border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#6F2C3E]" required>
                 </div>
               </div>
-        
+            
               <div class="mt-6">
                 <label for="mensagem" class="block text-left text-lg font-semibold text-gray-700">Mensagem</label>
                 <textarea id="mensagem" name="mensagem" rows="5" class="mt-2 p-3 w-full border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#6F2C3E]" required></textarea>
               </div>
-        
+              
+              <div class="mt-6">
+                <label for="arquivos" class="block text-left text-lg font-semibold text-gray-700">Anexar Arquivos</label>
+                <input type="file" id="arquivos" name="arquivos" class="mt-2 p-3 w-full border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#6F2C3E]" accept=".pdf,.doc,.docx,.txt,.jpg,.png,.jpeg" multiple required>
+                <div id="file-list" class="mt-4 space-y-2"></div>
+
+    <!-- Mensagem de limite de arquivos -->
+    <p id="file-limit-message" class="text-red-500 mt-2 hidden">Você atingiu o limite de 10 arquivos.</p>
+            </div>
+            <div id="overlay" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center hidden z-50">
+              <div id="loading-gif" class="w-24 h-24">
+                  <img src="/img/QHTn.gif" alt="Carregando...">
+              </div>
+          </div>
               <div class="mt-6">
                 <button type="submit" class="w-full bg-[#6F2C3E] text-white p-3 rounded-lg hover:bg-[#6F2C3E] transition">Enviar Mensagem</button>
               </div>
             </form>
-          </div>
-        </section>
-        
+            
 
           <!-- Canais de Comunicação -->
           <div class="mt-12">
@@ -83,5 +95,63 @@
           </div>
         </section>
     </div>
+    <script>
+      document.getElementById('submitBtn').addEventListener('click', function(event) {
+    event.preventDefault(); // Impede o envio do formulário
+
+    // Exibe o gif e o overlay
+    document.getElementById('overlay').classList.remove('hidden');
+
+    // Envia o formulário após 7 segundos
+    setTimeout(function() {
+        // Envia o formulário (por exemplo, se o botão for para enviar um formulário)
+        document.querySelector('form').submit();
+    }, 7000); // 7 segundos
+
+    // Oculta o gif após 7 segundos
+    setTimeout(function() {
+        document.getElementById('overlay').classList.add('hidden');
+    }, 7000); // 7 segundos
+});
+const fileInput = document.getElementById('arquivos');
+const fileList = document.getElementById('file-list');
+const fileLimitMessage = document.getElementById('file-limit-message');
+
+fileInput.addEventListener('change', function(event) {
+    const files = Array.from(event.target.files);  // Converte FileList para um array
+    fileList.innerHTML = '';  // Limpa a lista de arquivos
+
+    if (files.length > 10) {
+        files.length = 10;  // Limita a seleção a 10 arquivos
+        fileLimitMessage.classList.remove('hidden');  // Exibe a mensagem de limite
+    } else {
+        fileLimitMessage.classList.add('hidden');  // Esconde a mensagem de limite
+    }
+
+    // Exibe os arquivos selecionados na lista
+    files.forEach((file, index) => {
+        const fileItem = document.createElement('div');
+        fileItem.classList.add('flex', 'items-center', 'justify-between', 'p-2', 'border', 'border-gray-300', 'rounded-lg');
+
+        const fileName = document.createElement('span');
+        fileName.textContent = file.name;
+        fileItem.appendChild(fileName);
+
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'X';
+        removeButton.classList.add('text-red-500', 'hover:text-red-700', 'ml-2');
+        
+        removeButton.addEventListener('click', () => {
+            const updatedFiles = Array.from(fileInput.files).filter((f, i) => i !== index);  // Remove o arquivo da lista
+            fileInput.files = new FileList(updatedFiles);  // Atualiza a lista de arquivos
+            fileItem.remove();  // Remove o item da lista visível
+        });
+
+        fileItem.appendChild(removeButton);
+        fileList.appendChild(fileItem);
+    });
+});
+
+    </script>
 </body>
 </html>

@@ -13,6 +13,7 @@
     <meta property="og:url" content="">
     <meta name="twitter:card" content="summary_large_image">  
     <title>Padilha Advogados e Associados</title>
+    <link rel="icon" href="/img/img-logo-nova-guia-dourado.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -129,6 +130,15 @@
         <a href="#fidelidade" class="text-[#6F2C3E] hover:underline">Saiba mais</a>
       </div>
     </div>
+    <div id="cookie-popup" class="fixed bottom-0 left-0 right-0 bg-[#6F2C3E] text-white p-4 rounded-t-lg shadow-md flex justify-between items-center">
+      <div>
+          <p class="text-sm">Este site utiliza cookies para melhorar a sua experiência. Ao continuar, você aceita o uso de cookies.</p>
+      </div>
+      <div class="flex space-x-4">
+          <button id="accept-cookies" class="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm">Aceitar</button>
+          <button id="reject-cookies" class="bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm">Rejeitar</button>
+      </div>
+  </div>
 
     <footer class="bg-gray-800 text-white py-8">
       <div class="max-w-screen-lg mx-auto px-4">
@@ -140,8 +150,6 @@
             <h3 class="text-lg font-semibold mb-4">Contatos</h3>
             <ul class="space-y-2">
               <li><a href="https://wa.me/+5551991506782" class="flex items-center text-sm text-gray-300 hover:text-white"><i class="fab fa-whatsapp mr-2"></i> WhatsApp</a></li>
-              <li><a href="https://www.instagram.com/seuperfil" class="flex items-center text-sm text-gray-300 hover:text-white"><i class="fab fa-instagram mr-2"></i> Instagram</a></li>
-              <li><a href="https://www.facebook.com/seuperfil" class="flex items-center text-sm text-gray-300 hover:text-white"><i class="fab fa-facebook mr-2"></i> Facebook</a></li>
               <li><a href="mailto:jovitapadilhaadv@gmail.com" class="flex items-center text-sm text-gray-300 hover:text-white"><i class="fas fa-envelope mr-2"></i> Email</a></li>
             </ul>
           </div>
@@ -154,6 +162,53 @@
     </a>
     <script>
       AOS.init();
+       // Função para definir o cookie
+       function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Função para obter o valor de um cookie
+        function getCookie(name) {
+            let nameEq = name + "=";
+            let ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i].trim();
+                if (c.indexOf(nameEq) == 0) return c.substring(nameEq.length, c.length);
+            }
+            return "";
+        }
+
+        // Função para verificar o cookie e exibir o popup
+        function checkCookieConsent() {
+            let consent = getCookie("cookies_aceitos");
+
+            if (consent == "") {
+                // Se o cookie não existe, exibe o popup
+                document.getElementById("cookie-popup").style.display = "flex";
+            } else {
+                // Se o cookie já foi aceito, aplica a cor
+                document.body.style.backgroundColor = "#6F2C3E";
+            }
+        }
+
+        // Função para aceitar cookies
+        document.getElementById("accept-cookies").addEventListener("click", function() {
+            setCookie("cookies_aceitos", "sim", 365); // Define o cookie por 1 ano
+            document.getElementById("cookie-popup").style.display = "none"; // Fecha o popup
+            document.body.style.backgroundColor = "#6F2C3E"; // Define a cor de fundo
+        });
+
+        // Função para rejeitar cookies
+        document.getElementById("reject-cookies").addEventListener("click", function() {
+            setCookie("cookies_aceitos", "nao", 365); // Define o cookie por 1 ano, mas rejeitado
+            document.getElementById("cookie-popup").style.display = "none"; // Fecha o popup
+        });
+
+        // Chama a função para verificar o consentimento dos cookies quando a página carregar
+        checkCookieConsent();
     </script>
 </body>
 </html>
