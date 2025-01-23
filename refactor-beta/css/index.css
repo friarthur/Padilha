@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/* Body */
+body.bg-cover {
+  background-image: url('/public/img/logo-atualizada-sem-fundo.png');
+  background-size: 50%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #6F2C3E;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 50;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFD700;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.logo:hover {
+  color: #FFC300;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 32px;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu-link:hover {
+  color: #FFD700;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+.dropdown-button:hover {
+  color: #FFD700;
+}
+
+.dropdown-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none;
+  background-color: white;
+  color: black;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 8px;
+  width: 224px;
+  z-index: 100;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Dropdown Hover Effect */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Section Hero */
+.hero-section {
+  position: relative;
+  height: 60vh;
+  background-image: url('/img/logo-com-fundo-image-cidade-porto-alegre.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.hero-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6F2C3E;
+  margin-bottom: 16px;
+}
+
+.hero-text {
+  color: #4A4A4A;
+  margin-bottom: 24px;
+}
+
+.hero-button {
+  background-color: #6F2C3E;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #5B2A36;
+}
+
+/* Presentation Section */
+.presentation-container {
+  max-width: 1024px;
+  margin: 5% auto 0 auto;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.presentation-content {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+}
+
+.presentation-text {
+  flex: 1;
+  padding-right: 32px;
+}
+
+.presentation-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 16px;
+}
+
+.presentation-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.presentation-button {
+  display: inline-block;
+  background-color: #6F2C3E;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.presentation-button:hover {
+  background-color: #5B2A36;
+}
+
+.presentation-image {
+  flex-shrink: 0;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+}
+/* Divider */
+.divider {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  width: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 4px solid #6F2C3E;
+}
+
+/* Services Grid */
+/* Grid de Serviços */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card de Serviço */
+.service-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem do Serviço */
+.service-image {
+  width: 100%;
+  height: 200px; /* Ajusta a altura da imagem */
+  object-fit: cover; /* Faz com que a imagem cubra totalmente a área */
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover .service-image {
+  transform: scale(1.1); /* Dá um leve zoom na imagem ao passar o mouse */
+}
+
+/* Título do Serviço */
+.service-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* Descrição do Serviço */
+.service-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* Link do Serviço */
+.service-link {
+  font-size: 1.1rem;
+  color: #6F2C3E;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  display: block;
+  text-align: center;
+}
+
+.service-link:hover {
+  color: #9b3b53; /* Uma cor mais clara ao passar o mouse */
+  text-decoration: underline;
+}
+
+/* Divider */
+.divider {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  width: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 4px solid #6F2C3E;
+}
+
+/* Services Grid */
+/* Grid de Serviços */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card de Serviço */
+.service-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px; /* Reduz o tamanho do card */
+  justify-items: center;  /* Centraliza os itens na horizontal */
+  align-items: center;    /* Centraliza os itens na vertical (se a altura for maior que o conteúdo) */
+  text-align: center;
+  margin-left: 25%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem do Serviço */
+.service-image {
+  position: relative;
+  width: 100%;
+  height: 180px; /* Altura mais compacta */
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* A imagem ocupa toda a área do container sem distorções */
+  border-bottom: 4px solid #6F2C3E; /* Borda para separar a imagem do texto */
+}
+
+/* Título do Serviço */
+.service-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* Descrição do Serviço */
+.service-description {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* Link do Serviço */
+.service-link {
+  font-size: 1.1rem;
+  color: #6F2C3E;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  display: block;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.service-link:hover {
+  color: #9b3b53; /* Uma cor mais clara ao passar o mouse */
+  text-decoration: underline;
+}
+
+
+/* Cookie Popup */
+.cookie-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #6F2C3E;
+  color: white;
+  padding: 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cookie-text {
+  font-size: 0.875rem;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.accept-button, .reject-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.accept-button {
+  background-color: #4CAF50;
+  transition: background-color 0.3s;
+}
+
+.accept-button:hover {
+  background-color: #388E3C;
+}
+
+.reject-button {
+  background-color: #F44336;
+  transition: background-color 0.3s;
+}
+
+.reject-button:hover {
+  background-color: #D32F2F;
+}
+/* Footer */
+.footer {
+  background-color: #2D2D2D;
+  color: white;
+  padding: 2rem 0;
+  margin-top: 5%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* Footer Left */
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  font-size: 0.875rem;
+}
+
+/* Footer Right */
+.footer-right {
+  text-align: left;
+}
+
+.footer-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #A0A0A0;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+.footer-link i {
+  margin-right: 0.5rem;
+}

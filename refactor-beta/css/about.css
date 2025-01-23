@@ -1,0 +1,299 @@
+/* Reset e Estilos Básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #6F2C3E;
+  padding: 15px 0;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.navbar .menu {
+  float: right;
+  margin-right: 20px;
+}
+
+.navbar .menu-link {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar .menu-link:hover {
+  color: #ffcc00;
+}
+
+/* Seção "Sobre Nós" */
+.sobre-nos {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+/* Título principal */
+.sobre-nos .titulo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #6F2C3E;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Descrição */
+.sobre-nos .descricao {
+  font-size: 1.125rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+/* Imagem de perfil */
+.sobre-nos img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid #6F2C3E;
+}
+
+/* Missão e Valores */
+.missao-valores {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.missao, .valores {
+  width: 48%;
+}
+
+.missao-titulo, .valores-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6F2C3E;
+  margin-bottom: 10px;
+}
+
+.missao-descricao, .valores-lista {
+  font-size: 1rem;
+  color: #555;
+}
+
+.valores-lista {
+  list-style: none;
+}
+
+.valores-lista li {
+  margin-bottom: 8px;
+}
+/* Seção de Áreas de Atuação */
+.areas-de-atuacao {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.areas-de-atuacao .titulo {
+  font-size: 36px;
+  color: #6F2C3E;
+  margin-bottom: 20px;
+}
+
+.areas-de-atuacao .descricao {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Grid e Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  width: 100%;
+  max-width: 300px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-titulo {
+  font-size: 24px;
+  color: #6F2C3E;
+  margin-bottom: 15px;
+}
+
+.card-descricao {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.card ul li {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.card ul li::before {
+  content: '•';
+  color: #6F2C3E;
+  margin-right: 8px;
+}
+
+/* Estilos de Responsividade */
+@media (max-width: 768px) {
+  .missao-valores {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .missao, .valores {
+    width: 100%;
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer {
+  background-color: #2D2D2D;
+  color: white;
+  padding: 2rem 0;
+  margin-top: 5%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* Footer Left */
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  font-size: 0.875rem;
+}
+
+/* Footer Right */
+.footer-right {
+  text-align: left;
+}
+
+.footer-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #A0A0A0;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+.footer-link i {
+  margin-right: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .missao-valores {
+    flex-direction: column;
+  }
+
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
