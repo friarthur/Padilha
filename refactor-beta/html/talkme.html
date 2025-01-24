@@ -9,87 +9,86 @@
     <meta name="keywords" content="contato, advogados, serviços jurídicos, Padilha Advogados">
     <title>Fale Conosco - Padilha Advogados e Associados</title>
     <link rel="icon" href="/img/img-logo-nova-guia-dourado.png" type="image/x-icon">
+    <link rel="stylesheet" href="/refactor-beta/css/talkme.css">
 </head>
 <body>
-    <div class="relative">
-        <!-- Navbar -->
-        <nav class="navbar">
-          <div class="container">
-            <a href="#">
-              Padilha Advogados
-            </a>
-            <div class="hidden">
-              <a href="../index.html" >Início</a>
-              <a href="">Sobre Nós</a>
-              <a href="">Serviços</a>
-              <a href="">Fale Conosco</a> <!-- Link para Fale Conosco -->
+  <div class="relative">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Padilha Advogados</a>
+            <div class="nav-links">
+                <a href="http://localhost:3000/#home">Início</a>
+                <a href="http://localhost:3000/sobre">Sobre Nós</a>
+                <a href="http://localhost:3000/html/services.html">Serviços</a>
+                <a href="http://localhost:3000/html/talkme.html">Fale Conosco</a>
             </div>
-          </div>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- Seção Fale Conosco -->
-        <section id="fale-conosco" >
-          <h2>Fale Conosco</h2>
-          <p>Tem dúvidas ou quer saber mais sobre nossos serviços? Entre em contato conosco preenchendo o formulário abaixo ou pelos nossos canais de comunicação.</p>
-        
-          <div class="max">
+    <!-- Seção Fale Conosco -->
+    <section id="fale-conosco" class="contact-section">
+        <h2 class="section-title">Fale Conosco</h2>
+        <p class="section-description">Tem dúvidas ou quer saber mais sobre nossos serviços? Entre em contato conosco preenchendo o formulário abaixo ou pelos nossos canais de comunicação.</p>
+    
+        <div class="form-container">
             <!-- Formulário de Contato -->
             <form action="/enviar-email" method="POST" enctype="multipart/form-data">
-              <div>
-                <div>
-                  <label for="nome" class="block text-left text-lg font-semibold text-gray-700">Nome</label>
-                  <input type="text" id="nome" name="nome" class="mt-2 p-3 w-full border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#6F2C3E]" required>
+                <div class="form-grid">
+                    <div>
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" id="nome" name="nome" class="form-input" required>
+                    </div>
+                    <div>
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
                 </div>
-                <div>
-                  <label for="email" class="block text-left text-lg font-semibold text-gray-700">E-mail</label>
-                  <input type="email" id="email" name="email" class="mt-2 p-3 w-full border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#6F2C3E]" required>
+        
+                <div class="form-group">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" class="form-input" required></textarea>
                 </div>
-              </div>
-            
-              <div>
-                <label for="mensagem" class="block text-left text-lg font-semibold text-gray-700">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" rows="5" class="mt-2 p-3 w-full border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#6F2C3E]" required></textarea>
-              </div>
-              
-              <div>
-                <label for="arquivos" class="block text-left text-lg font-semibold text-gray-700">Anexar Arquivos</label>
-                <input type="file" id="arquivos" name="arquivos" class="mt-2 p-3 w-full border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#6F2C3E]" accept=".pdf,.doc,.docx,.txt,.jpg,.png,.jpeg" multiple required>
-                <div id="file-list" class="mt-4 space-y-2"></div>
+                
+                <div class="form-group">
+                    <label for="arquivos" class="form-label">Anexar Arquivos</label>
+                    <input type="file" id="arquivos" name="arquivos" class="form-input" accept=".pdf,.doc,.docx,.txt,.jpg,.png,.jpeg" multiple required>
+                    <div id="file-list" class="file-list"></div>
+                    <p id="file-limit-message" class="file-limit-message hidden">Você atingiu o limite de 10 arquivos.</p>
+                </div>
+                
+                <div id="overlay" class="overlay hidden">
+                    <div id="loading-gif">
+                        <img src="/img/QHTn.gif" alt="Carregando...">
+                    </div>
+                </div>
 
-    <!-- Mensagem de limite de arquivos -->
-    <p id="file-limit-message" class="text-red-500 mt-2 hidden">Você atingiu o limite de 10 arquivos.</p>
-            </div>
-            <div id="overlay">
-              <div id="loading-gif">
-                  <img src="" alt="Carregando...">
-              </div>
-          </div>
-              <div>
-                <button type="submit">Enviar Mensagem</button>
-              </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Enviar Mensagem</button>
+                </div>
             </form>
-            
 
-          <!-- Canais de Comunicação -->
-          <div >
-            <h3>Nossos Canais de Comunicação</h3>
-            <div>
-              <a href="https://wa.me/55999999999">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-              <a href="https://www.instagram.com/padilha_advogados" >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="https://www.facebook.com/padilhaadvogados" >
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a href="mailto:contato@padilhaadvogados.com">
-                <i class="fas fa-envelope"></i>
-              </a>
+            <!-- Canais de Comunicação -->
+            <div class="communication-channels">
+                <h3 class="channel-title">Nossos Canais de Comunicação</h3>
+                <div class="social-icons">
+                    <a href="https://wa.me/55999999999" class="social-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/padilha_advogados" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/padilhaadvogados" class="social-icon facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="mailto:contato@padilhaadvogados.com" class="social-icon email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
             </div>
-          </div>
-        </section>
-    </div>
+        </div>
+    </section>
+</div>
     
 </body>
 </html>
