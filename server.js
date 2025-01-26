@@ -65,6 +65,7 @@ app.post('/enviar-email', upload.array('arquivos', 10), (req, res) => {
     }
 
     // Configuração do transportador de e-mail (usando o Gmail no exemplo)
+    require('dotenv').config();
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
