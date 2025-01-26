@@ -48,74 +48,76 @@ body {
 }
 
 /* Seção "Sobre Nós" */
+/* Estilo geral da seção "Sobre Nós" */
 .sobre-nos {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  margin-bottom: 40px;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
-/* Título principal */
-.sobre-nos .titulo {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #6F2C3E;
+.titulo {
+  font-size: 2rem;
+  color: #6f2c3e;
   margin-bottom: 20px;
-  text-align: center;
 }
 
-/* Descrição */
-.sobre-nos .descricao {
-  font-size: 1.125rem;
+.descricao {
+  font-size: 1.1rem;
   color: #555;
-  text-align: center;
+  line-height: 1.5;
   margin-bottom: 40px;
-  line-height: 1.8;
 }
 
-/* Imagem de perfil */
-.sobre-nos img {
-  display: block;
-  margin: 20px auto;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border: 4px solid #6F2C3E;
-}
-
-/* Missão e Valores */
+/* Estilo para o container de missão e valores */
 .missao-valores {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 20px;
-  margin-top: 40px;
+  flex-wrap: wrap;
 }
 
+/* Estilo dos cards de missão e valores */
 .missao, .valores {
-  width: 48%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 45%;
+  min-width: 280px;
+  transition: transform 0.3s ease-in-out;
 }
 
+/* Efeito de hover nos cards */
+.missao:hover, .valores:hover {
+  transform: translateY(-10px);
+}
+
+/* Títulos dentro dos cards */
 .missao-titulo, .valores-titulo {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #6F2C3E;
-  margin-bottom: 10px;
+  color: #6f2c3e;
+  margin-bottom: 15px;
 }
 
-.missao-descricao, .valores-lista {
+/* Descrição dentro do card de missão */
+.missao-descricao {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Estilo da lista de valores */
+.valores-lista {
+  list-style-type: none;
+  padding: 0;
   font-size: 1rem;
   color: #555;
 }
 
-.valores-lista {
-  list-style: none;
+.valores-lista li {
+  margin-bottom: 10px;
 }
 
-.valores-lista li {
-  margin-bottom: 8px;
-}
 /* Seção de Áreas de Atuação */
 .areas-de-atuacao {
   padding: 50px 0;
@@ -297,3 +299,26 @@ body {
     margin-bottom: 20px;
   }
 }
+/* Estilo para os ícones */
+.card-titulo i {
+  margin-right: 8px;
+  color: #6f2c3e;
+}
+
+/* Botão de ação */
+.btn-acao {
+  display: inline-block;
+  background-color: #6f2c3e;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-acao:hover {
+  background-color: #8e4a62;
+}
+

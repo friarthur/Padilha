@@ -7,6 +7,21 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+.html, body{
+  overflow: auto;
+  scroll-behavior: smooth;
+  
+}
+.hidden {
+  
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.visible {
+  
+  transform: translateY(0);
+}
 body {
     background-color: #F8F8F8;
     font-family: "Poppins", sans-serif;

@@ -7,6 +7,22 @@
   font-family: 'Poppins', sans-serif;
 }
 /* Body */
+.html, body{
+  overflow: auto;
+  scroll-behavior: smooth;
+  
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 body.bg-cover {
   background-image: url('/public/img/logo-atualizada-sem-fundo.png');
   background-size: 50%;
@@ -439,54 +455,64 @@ body.bg-cover {
 /* Cookie Popup */
 .cookie-popup {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #6F2C3E;
-  color: white;
-  padding: 1rem;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  bottom: 20px;
+  right: 20px;
+  max-width: 400px;
+  background-color: #6f2c3e; /* Cor de fundo */
+  color: #fff; /* Texto branco */
+  padding: 20px;
+  border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
 }
 
-.cookie-text {
-  font-size: 0.875rem;
+.cookie-popup h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.cookie-popup .cookie-text {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .cookie-buttons {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
 }
 
-.accept-button, .reject-button {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  color: white;
-  border-radius: 0.5rem;
+.cookie-buttons .accept-button,
+.cookie-buttons .reject-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.accept-button {
-  background-color: #4CAF50;
-  transition: background-color 0.3s;
+.cookie-buttons .accept-button {
+  background-color: #4caf50; /* Verde para "Aceitar" */
+  color: #fff;
 }
 
-.accept-button:hover {
-  background-color: #388E3C;
+.cookie-buttons .accept-button:hover {
+  background-color: #45a047;
 }
 
-.reject-button {
-  background-color: #F44336;
-  transition: background-color 0.3s;
+.cookie-buttons .reject-button {
+  background-color: #f44336; /* Vermelho para "Rejeitar" */
+  color: #fff;
 }
 
-.reject-button:hover {
-  background-color: #D32F2F;
+.cookie-buttons .reject-button:hover {
+  background-color: #e53935;
 }
+
+
+
 /* Footer */
 .footer {
   background-color: #2D2D2D;
@@ -562,4 +588,30 @@ body.bg-cover {
 
 .footer-link i {
   margin-right: 0.5rem;
+}
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+/* Ícone do WhatsApp */
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
 }
