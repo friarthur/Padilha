@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,134 +13,122 @@
     <meta property="og:url" content="URL_DO_SITE">
     <meta name="twitter:card" content="summary_large_image">
     <title>Serviços - Padilha Advogados e Associados</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="/img/img-logo-nova-guia-dourado.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/service.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
 </head>
-<body class="bg-gray-50">
+<body>
+
+  <!--NavBar-->
+  <div class="relative">
     <!-- Navbar -->
-    <nav class="bg-[#6F2C3E] text-white shadow-lg">
-        <div class="container mx-auto px-6 flex justify-between items-center h-16">
-            <a href="#" class="text-3xl font-bold text-yellow-400 hover:text-yellow-500">Padilha Advogados</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="http://localhost:3000/#home" class="hover:text-yellow-500 transition">Início</a>
-              <a href="http://localhost:3000/sobre" class="hover:text-yellow-500 transition">Sobre Nós</a>
-              <a href="http://localhost:3000/html/services.html" class="hover:text-yellow-500 transition">Serviços</a>
-              <a href="http://localhost:3000/html/talkme.html" class="hover:text-yellow-500 transition">Fale Conosco</a>
-            </div>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">PADILHA ADVOGADOS</a>
+        <div class="menu" id="menu">
+          <a href="/" class="menu-link">
+            <i class="fas fa-home"></i> Início
+          </a>
+          <a href="http://localhost:3000/sobre" class="menu-link">
+            <i class="fas fa-users"></i> Sobre Nós
+          </a>
+          <a href="/html/services.html" class="menu-link">
+            <i class="fas fa-briefcase"></i> Serviços
+          </a>
+          <a href="/html/talkme.html" class="menu-link">
+            <i class="fas fa-envelope"></i> Fale Conosco
+          </a>
+          
         </div>
+      </div>
     </nav>
+  </div>
 
-    <!-- Hero Section -->
-    <section class="bg-[#6F2C3E] text-white py-16">
-        <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold mb-4">Nossos Serviços</h1>
-            <p class="text-lg">Soluções jurídicas especializadas em Direito Bancário e Previdenciário.</p>
+  <!--Sobre  Section-->
+  <section class="hero">
+    <div class="container-hero">
+      <h1>Nossos Serviços</h1>
+      <p>Soluções jurídicas especializadas em Direito Bancário e Previdenciário.</p>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container-services">
+      <div class="service-card">
+        <h3>Renegociação de Dívidas</h3>
+        <p>Auxiliamos na renegociação de dívidas bancárias, buscando condições mais favoráveis para nossos clientes.</p>
+      </div>
+      <div class="service-card">
+        <h3>Defesa em Ações Bancárias</h3>
+        <p>Atuamos na defesa dos seus direitos contra práticas abusivas de instituições financeiras.</p>
+      </div>
+      <div class="service-card">
+        <h3>Planejamento Previdenciário</h3>
+        <p>Elaboramos estratégias para garantir o melhor benefício previdenciário para você.</p>
+      </div>
+      <div class="service-card">
+        <h3>Revisão de Benefícios</h3>
+        <p>Revisamos benefícios previdenciários para assegurar que você receba o valor correto.</p>
+      </div>
+      <div class="service-card">
+        <h3>Aposentadoria Especial</h3>
+        <p>Orientamos profissionais de áreas especiais sobre os direitos e requisitos para aposentadoria.</p>
+      </div>
+      <div class="service-card">
+        <h3>Consultoria Jurídica Personalizada</h3>
+        <p>Oferecemos atendimento dedicado para resolver questões específicas em direito bancário e previdenciário.</p>
+      </div>
+    </div>
+  </section>
+  
+      <!--Localização-->
+      <section class="localization">
+        <div class="container">
+          <h2>Nossa Localização</h2>
+          <p>Venha nos visitar no coração de Porto Alegre.</p>
         </div>
-    </section>
-    
-    <!-- Serviços -->
-    <section class="py-16">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white shadow-lg rounded-lg p-6 text-center" data-aos="fade-up">
-                    <i class="fas fa-handshake text-[#6F2C3E] text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Renegociação de Dívidas</h3>
-                    <p>Auxiliamos na renegociação de dívidas bancárias, buscando condições mais favoráveis para nossos clientes.</p>
-                </div>
-    
-                <div class="bg-white shadow-lg rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-university text-[#6F2C3E] text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Defesa em Ações Bancárias</h3>
-                    <p>Atuamos na defesa dos seus direitos contra práticas abusivas de instituições financeiras.</p>
-                </div>
-    
-                <div class="bg-white shadow-lg rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-file-invoice-dollar text-[#6F2C3E] text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Planejamento Previdenciário</h3>
-                    <p>Elaboramos estratégias para garantir o melhor benefício previdenciário para você.</p>
-                </div>
-    
-                <div class="bg-white shadow-lg rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-shield-alt text-[#6F2C3E] text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Revisão de Benefícios</h3>
-                    <p>Revisamos benefícios previdenciários para assegurar que você receba o valor correto.</p>
-                </div>
-    
-                <div class="bg-white shadow-lg rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-briefcase text-[#6F2C3E] text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Aposentadoria Especial</h3>
-                    <p>Orientamos profissionais de áreas especiais sobre os direitos e requisitos para aposentadoria.</p>
-                </div>
-    
-                <div class="bg-white shadow-lg rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="500">
-                    <i class="fas fa-balance-scale text-[#6F2C3E] text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Consultoria Jurídica Personalizada</h3>
-                    <p>Oferecemos atendimento dedicado para resolver questões específicas em direito bancário e previdenciário.</p>
-                </div>
-            </div>
+      
+        <div class="container-cards">
+          <div class="card-map" data-aos="fade-right">
+            <iframe 
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.773432843087!2d-51.230100824356674!3d-30.03462177415853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197907e6b155b7%3A0x1fbbd40c0713f78e!2sAv.%20Borges%20de%20Medeiros%2C%20410%20-%20Centro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS%2C%2090070-100!5e0!3m2!1spt-BR!2sbr!4v1677076112345!5m2!1spt-BR!2sbr" 
+              allowfullscreen=""
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+      
+          <div class="card-address" data-aos="fade-left">
+            <h3>Endereço do Escritório</h3>
+            <p>Av. Borges de Medeiros, 410 <br> Sala 1214, Centro Histórico <br> Porto Alegre - RS</p>
+            <a href="https://www.google.com/maps/place/Av." target="_blank" class="btn-map">
+              Ver no Google Maps
+            </a>
+          </div>
         </div>
-    </section>
-    
-    <!-- Localização -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-[#6F2C3E]">Nossa Localização</h2>
-                <p class="text-lg">Venha nos visitar no coração de Porto Alegre.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="w-full h-64 rounded-lg overflow-hidden shadow-lg" data-aos="fade-right">
-                    <iframe 
-                        class="w-full h-full"
-                        
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.773432843087!2d-51.230100824356674!3d-30.03462177415853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197907e6b155b7%3A0x1fbbd40c0713f78e!2sAv.%20Borges%20de%20Medeiros%2C%20410%20-%20Centro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS%2C%2090070-100!5e0!3m2!1spt-BR!2sbr!4v1677076112345!5m2!1spt-BR!2sbr" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">">
-                    </iframe>
-                </div>
-                <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center text-center" data-aos="fade-left">
-                    <i class="fas fa-map-marker-alt text-[#6F2C3E] text-5xl mb-4"></i>
-                    <h3 class="text-2xl font-bold text-[#6F2C3E] mb-2">Endereço do Escritório</h3>
-                    <p class="text-gray-700 text-lg mb-4">Av. Borges de Medeiros, 410 <br> Sala 1214, Centro Histórico <br> Porto Alegre - RS</p>
-                    <a href="https://www.google.com/maps/place/Av." target="_blank" class="bg-[#6F2C3E] text-white px-6 py-3 rounded-lg shadow hover:bg-[#6F2C3E] transition">
-                        Ver no Google Maps
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+      </section>
+      
 
-    <!-- Footer -->
-    <footer class="bg-[#6F2C3E] text-white py-8">
-        <div class="max-w-screen-lg mx-auto px-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <p class="text-sm">&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contatos</h3>
-                    <ul class="space-y-2">
-                        <li><a href="https://wa.me/+5551991506782" class="flex items-center text-sm text-gray-300 hover:text-white"><i class="fab fa-whatsapp mr-2"></i> WhatsApp</a></li>
-                        
-                        <li><a href="mailto:jovitapadilhaadv@gmail.com" class="flex items-center text-sm text-gray-300 hover:text-white"><i class="fas fa-envelope mr-2"></i> Email</a></li>
-                    </ul>
-                </div>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-grid">
+            <div class="footer-left">
+              <p class="footer-text">&copy;  2025 Padilha Advogados. Todos os direitos reservados.
+                OAB: 99376/RS</p>
             </div>
+            <div class="footer-right">
+              <h3 class="footer-heading">Contatos</h3>
+              <ul class="footer-links">
+                <li><a href="https://wa.me/+5551991506782" class="footer-link"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                <li><a href="mailto:jovitapadilhaadv@gmail.com" class="footer-link"><i class="fas fa-envelope"></i> Email</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </footer>
-
-    <a href="https://wa.me/+5551991506782" target="_blank" class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300">
-        <i class="fab fa-whatsapp text-2xl"></i>
-    </a>
-
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+      </footer>
+<script src="/refactor-beta/script/service.js"></script>
 </body>
 </html>

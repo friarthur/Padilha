@@ -1,214 +1,171 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="author" content="Padilha Advogados e Associados">
     <meta name="description" content="Site oficial de Padilha Advogados e Associados, especializado em soluções jurídicas personalizadas.">
-    <meta name="keywords" content="advocacia, advogados, soluções jurídicas, serviços jurídicos, Padilha">
-    <meta property="og:title" content="Padilha Advogados e Associados">
-    <meta property="og:description" content="Especialistas em soluções jurídicas personalizadas.">
-    <meta property="og:image" content="URL_DA_IMAGEM">
-    <meta property="og:url" content="">
-    <meta name="twitter:card" content="summary_large_image">  
-    <title>Padilha Advogados e Associados</title>
-    <link rel="icon" href="/img/img-logo-nova-guia-dourado.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="/script/index.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-cover bg-center bg-fixed bg-no-repeat" style="background-image: url('/public/img/logo-atualizada-sem-fundo.png'); background-size: 50%; height: 100vh;">
-    <div class="relative">
-        <!-- Navbar -->
-        <nav class="bg-[#6F2C3E] text-white shadow-lg z-50 relative">
-          <div class="container mx-auto px-6 flex justify-between items-center h-16">
-            <a href="#" class="text-3xl font-bold text-yellow-400 hover:text-yellow-500">
-              Padilha Advogados
-            </a>
-            <div class="hidden md:flex space-x-8">
-              <a href="#home" class="hover:text-yellow-500 transition">Início</a>
-              <a href="http://localhost:3000/sobre" class="hover:text-yellow-500 transition">Sobre Nós</a>
-              <a href="/html/services.html" class="hover:text-yellow-500 transition">Serviços</a>
-              <div class="relative group">
-                <button class="flex items-center space-x-2 hover:text-yellow-500 transition">
-                  <span>Contato</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                  </svg>
-                </button>
-                <div class="absolute hidden group-hover:block bg-white text-gray-800 shadow-lg rounded-lg mt-2 w-56">
-                  <a href="/html/talkme.html" class="block px-4 py-3 hover:bg-gray-100">Fale Conosco</a>
-                  <a href="#email" class="block px-4 py-3 hover:bg-gray-100">Email</a>
-                  <a href="#telefone" class="block px-4 py-3 hover:bg-gray-100">Telefone</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-      
-        <!-- Seção de Apresentação -->
-        <section class="relative h-[60vh] bg-cover bg-center" style="background-image: url('/img/logo-com-fundo-image-cidade-porto-alegre.png');">
-          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-          <div class="relative z-10 flex justify-center items-center h-full">
-            <div class="bg-white bg-opacity-80 p-8 rounded-lg shadow-lg max-w-lg text-center">
-                <h2 class="text-3xl font-bold text-[#6F2C3E] mb-4">Bem-vindo ao Padilha Advogados</h2>
-                <p class="text-gray-700 mb-6">
-                  Somos especialistas em combater juros abusivos e proteger os direitos dos nossos clientes em renegociações financeiras.
-                </p>
-                <a href="#about" class="bg-[#6F2C3E] text-white px-6 py-2 rounded-md hover:bg-[#5B2A36] transition">
-                  Saiba Mais
-                </a>
-              </div>
-          </div>
-        </section>
-      </div>
-      
-      <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-[5%]">
-        <div class="flex items-center p-6">
-            <div class="flex-1 pr-8">
-              <h2 class="text-3xl font-semibold text-gray-800 mb-4 underline text-center">Apresentação</h2>
-              <p class="text-lg text-gray-600">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique, nulla et cursus tincidunt, elit elit feugiat justo, non aliquam nulla turpis eget nisi. Fusce tincidunt, est nec vehicula dapibus, odio eros auctor nisi, ac aliquam eros urna eget metus.
-              </p>
-              <a href="#curriculo" class="inline-block bg-[#6F2C3E] text-white px-6 py-2 rounded-lg shadow-lg hover:bg-[#5B2A36] transition duration-300">Ver Currículo</a>
-            </div>
-            <div class="flex-shrink-0">
-                <img src="https://via.placeholder.com/150" alt="Imagem do Perfil" class="rounded-full w-32 h-32 object-cover">
-            </div>
-        </div>
-    </div>
 
-    <div class="mt-12 mb-8 w-24 mx-auto border-t-4 border-[#6F2C3E]"></div>
+    <!-- CSS do AOS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- JS do AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
-        <div class="mb-4">
-          <img src="/img/16006571-servicos-de-escritorio-de-advocacia-com-justica-assessoria-juridica-julgamento-e-consultor-de-advogado-na-ilustracao-de-modelos-desenhados-a-mao-de-poster-d.jpg" alt="Consultoria Jurídica" class="w-full h-40 object-cover rounded-t-lg">
+  </head>
+<body class="bg-cover">
+  <div class="relative">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">PADILHA ADVOGADOS</a>
+        <div class="menu" id="menu">
+          <a href="#home" class="menu-link">
+            <i class="fas fa-home"></i> Início
+          </a>
+          <a href="http://localhost:3000/sobre" class="menu-link">
+            <i class="fas fa-users"></i> Sobre Nós
+          </a>
+          <a href="/html/services.html" class="menu-link">
+            <i class="fas fa-briefcase"></i> Serviços
+          </a>
+          <a href="/html/talkme.html" class="menu-link">
+            <i class="fas fa-envelope"></i> Fale Conosco
+          </a>
+          
         </div>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Consultoria Jurídica</h3>
-        <p class="text-gray-600 mb-4">Ajudamos empresas e indivíduos a resolver questões legais, oferecendo consultoria em diversas áreas do direito, com foco em soluções rápidas e eficazes.</p>
-        <a href="#consultoria" class="text-[#6F2C3E] hover:underline">Saiba mais</a>
       </div>
-      <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
-        <div class="mb-4">
-          <img src="/img/cliente-de-consultoria-de-advogado-de-cenas-de-lei-e-justica-conceito-de-consultoria-juridica-ilustracao-vetorial-plana-e-conjunto-de-icones_128772-1792.avif" alt="Advocacia" class="w-full h-40 object-cover rounded-t-lg">
-        </div>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Advocacia</h3>
-        <p class="text-gray-600 mb-4">Representação legal especializada para empresas e indivíduos. Atuamos em diversas áreas do direito, como civil, trabalhista, e empresarial.</p>
-        <a href="#advocacia" class="text-[#6F2C3E] hover:underline">Saiba mais</a>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
-        <div class="mb-4">
-          <img src="/img/pngtree-consulting-clipart-vector-illustration-of-business-couple-office-meeting-concept-flat-png-image_6794479.png" alt="Assessoria Jurídica" class="w-full h-40 object-cover rounded-t-lg">
-        </div>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Assessoria Jurídica</h3>
-        <p class="text-gray-600 mb-4">Prestamos assessoria para empresas que necessitam de suporte legal constante, desde a elaboração de contratos até a gestão de questões jurídicas complexas.</p>
-        <a href="#assessoria" class="text-[#6F2C3E] hover:underline">Saiba mais</a>
+    </nav>
+  </div>
+  <!-- seção de apresentação -->
+  <section class="hero-section">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <div class="hero-box">
+        <h2 class="hero-title">Bem-vindo ao Padilha Advogados</h2>
+        <p class="hero-text">
+          Somos especialistas em combater juros abusivos e proteger os direitos dos nossos clientes em renegociações financeiras.
+        </p>
+        <a href="#about" class="hero-button">Saiba Mais</a>
       </div>
     </div>
+  </section>
 
-    <div class="mt-12 mb-8 w-24 mx-auto border-t-4 border-[#6F2C3E]"></div>
-
-    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
-        <div class="mb-4">
-          <img src="/img/10635046.png" alt="Confiabilidade com Cliente" class="w-full h-40 object-cover rounded-t-lg">
-        </div>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Confiabilidade com Cliente</h3>
-        <p class="text-gray-600 mb-4">Nossa empresa tem um histórico comprovado de excelência, oferecendo serviços com transparência e dedicação para garantir a confiança de nossos clientes.</p>
-        <a href="#confiabilidade" class="text-[#6F2C3E] hover:underline">Saiba mais</a>
+  <div class="presentation-container">
+    <div class="presentation-content">
+      <div class="presentation-text">
+        <h2 class="presentation-title">Apresentação</h2>
+        <p class="presentation-description">
+          Jovita Padilha é uma advogada especializada em Direito Previdenciário, atuando com ênfase nas questões relacionadas ao INSS. Ela oferece serviços de concessão, restabelecimento e revisão de aposentadorias, além de atuar em casos de auxílio-doença, benefícios assistenciais (LOAS), pensão por morte, salário-maternidade, e auxílio por incapacidade, tanto permanente quanto temporária. Jovita também trabalha com aposentadorias por idade, tempo de contribuição e aposentadorias especiais.
+          Atualmente, exerce sua profissão em Porto Alegre - RS, dedicando-se a garantir os direitos previdenciários de seus clientes com excelência e comprometimento.
+        </p>
+        <a href="#curriculo" class="presentation-button">Ver Currículo</a>
       </div>
-      <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
-        <div class="mb-4">
-          <img src="/img/capa-Fidelizacao-de-clientes.png" alt="Fidelidade" class="w-full h-40 object-cover rounded-t-lg">
-        </div>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Fidelidade</h3>
-        <p class="text-gray-600 mb-4">Com o compromisso de atender sempre da melhor forma, nossa empresa se destaca pela fidelidade e cuidado com cada cliente, criando relações duradouras e de confiança.</p>
-        <a href="#fidelidade" class="text-[#6F2C3E] hover:underline">Saiba mais</a>
+      <div class="presentation-image">
+        <img src="https://via.placeholder.com/150" alt="Imagem do Perfil" class="profile-image">
       </div>
     </div>
-    <div id="cookie-popup" class="fixed bottom-0 left-0 right-0 bg-[#6F2C3E] text-white p-4 rounded-t-lg shadow-md flex justify-between items-center">
-      <div>
-          <p class="text-sm">Este site utiliza cookies para melhorar a sua experiência. Ao continuar, você aceita o uso de cookies.</p>
-      </div>
-      <div class="flex space-x-4">
-          <button id="accept-cookies" class="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm">Aceitar</button>
-          <button id="reject-cookies" class="bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm">Rejeitar</button>
-      </div>
   </div>
 
-    <footer class="bg-gray-800 text-white py-8">
-      <div class="max-w-screen-lg mx-auto px-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <p class="text-sm">&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Contatos</h3>
-            <ul class="space-y-2">
-              <li><a href="https://wa.me/+5551991506782" class="flex items-center text-sm text-gray-300 hover:text-white"><i class="fab fa-whatsapp mr-2"></i> WhatsApp</a></li>
-              <li><a href="mailto:jovitapadilhaadv@gmail.com" class="flex items-center text-sm text-gray-300 hover:text-white"><i class="fas fa-envelope mr-2"></i> Email</a></li>
-            </ul>
-          </div>
-        </div>
+  <!--cards-->
+  <div class="divider"></div>
+
+<div class="services-grid">
+  <div class="service-card">
+    <div class="service-image">
+      <img src="/img/16006571-servicos-de-escritorio-de-advocacia-com-justica-assessoria-juridica-julgamento-e-consultor-de-advogado-na-ilustracao-de-modelos-desenhados-a-mao-de-poster-d.jpg" alt="Consultoria Jurídica">
+    </div>
+    <h3 class="service-title">Consultoria Jurídica</h3>
+    <p class="service-description">
+      Ajudamos empresas e indivíduos a resolver questões legais, oferecendo consultoria em diversas áreas do direito, com foco em soluções rápidas e eficazes.
+    </p>
+    <a href="#consultoria" class="service-link">Saiba mais</a>
+  </div>
+  
+  <div class="service-card">
+    <div class="service-image">
+      <img src="/img/cliente-de-consultoria-de-advogado-de-cenas-de-lei-e-justica-conceito-de-consultoria-juridica-ilustracao-vetorial-plana-e-conjunto-de-icones_128772-1792.avif" alt="Advocacia">
+    </div>
+    <h3 class="service-title">Advocacia</h3>
+    <p class="service-description">
+      Representação legal especializada para empresas e indivíduos. Atuamos em diversas áreas do direito, como civil, trabalhista, e empresarial.
+    </p>
+    <a href="#advocacia" class="service-link">Saiba mais</a>
+  </div>
+  
+  <div class="service-card">
+    <div class="service-image">
+      <img src="/img/pngtree-consulting-clipart-vector-illustration-of-business-couple-office-meeting-concept-flat-png-image_6794479.png" alt="Assessoria Jurídica">
+    </div>
+    <h3 class="service-title">Assessoria Jurídica</h3>
+    <p class="service-description">
+      Prestamos assessoria para empresas que necessitam de suporte legal constante, desde a elaboração de contratos até a gestão de questões jurídicas complexas.
+    </p>
+    <a href="#assessoria" class="service-link">Saiba mais</a>
+  </div>
+</div>
+<div class="divider"></div>
+
+<div class="services-grid">
+  <div class="service-card">
+    <div class="service-image">
+      <img src="/img/10635046.png" alt="Confiabilidade com Cliente">
+    </div>
+    <h3 class="service-title">Confiabilidade com Cliente</h3>
+    <p class="service-description">
+      Nossa empresa tem um histórico comprovado de excelência, oferecendo serviços com transparência e dedicação para garantir a confiança de nossos clientes.
+    </p>
+    <a href="/html/about.html" class="service-link">Saiba mais</a>
+  </div>
+  
+  <div class="service-card">
+    <div class="service-image">
+      <img src="/img/capa-Fidelizacao-de-clientes.png" alt="Fidelidade">
+    </div>
+    <h3 class="service-title">Fidelidade</h3>
+    <p class="service-description">
+      Com o compromisso de atender sempre da melhor forma, nossa empresa se destaca pela fidelidade e cuidado com cada cliente, criando relações duradouras e de confiança.
+    </p>
+    <a href="#fidelidade" class="service-link">Saiba mais</a>
+  </div>
+</div>
+<a href="https://wa.me/+5551991506782" target="_blank" class="whatsapp-button" title="Fale conosco no WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon">
+</a>
+
+<div id="cookie-popup" class="cookie-popup">
+  <div>
+    <h1>Permitir Cookies</h1>
+    <p class="cookie-text">
+      Nós usamos cookies e outras tecnologias semelhantes para melhorar a sua experiência em nossos serviços,
+      personalizar publicidade e recomendar conteúdo de seu interesse. Ao utilizar nossos serviços, você concorda com tal monitoramento.
+    </p>
+  </div>
+  <div class="cookie-buttons">
+    <button id="accept-cookies" class="accept-button">Aceitar</button>
+    <button id="reject-cookies" class="reject-button">Rejeitar</button>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-left">
+        <p class="footer-text">&copy; © 2025 Padilha Advogados. Todos os direitos reservados.
+          OAB: 99376/RS</p>
       </div>
-    </footer>
+      <div class="footer-right">
+        <h3 class="footer-heading">Contatos</h3>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/+5551991506782" class="footer-link"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+          <li><a href="mailto:jovitapadilhaadv@gmail.com" class="footer-link"><i class="fas fa-envelope"></i> Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 
-    <a href="https://wa.me/+5551991506782" target="_blank" class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300">
-      <i class="fab fa-whatsapp text-2xl"></i>
-    </a>
-    <script>
-      AOS.init();
-       // Função para definir o cookie
-       function setCookie(name, value, days) {
-            const d = new Date();
-            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-            let expires = "expires=" + d.toUTCString();
-            document.cookie = name + "=" + value + ";" + expires + ";path=/";
-        }
-
-        // Função para obter o valor de um cookie
-        function getCookie(name) {
-            let nameEq = name + "=";
-            let ca = document.cookie.split(';');
-            for (let i = 0; i < ca.length; i++) {
-                let c = ca[i].trim();
-                if (c.indexOf(nameEq) == 0) return c.substring(nameEq.length, c.length);
-            }
-            return "";
-        }
-
-        // Função para verificar o cookie e exibir o popup
-        function checkCookieConsent() {
-            let consent = getCookie("cookies_aceitos");
-
-            if (consent == "") {
-                // Se o cookie não existe, exibe o popup
-                document.getElementById("cookie-popup").style.display = "flex";
-            } else {
-                // Se o cookie já foi aceito, aplica a cor
-                document.body.style.backgroundColor = "#6F2C3E";
-            }
-        }
-
-        // Função para aceitar cookies
-        document.getElementById("accept-cookies").addEventListener("click", function() {
-            setCookie("cookies_aceitos", "sim", 365); // Define o cookie por 1 ano
-            document.getElementById("cookie-popup").style.display = "none"; // Fecha o popup
-            document.body.style.backgroundColor = "#6F2C3E"; // Define a cor de fundo
-        });
-
-        // Função para rejeitar cookies
-        document.getElementById("reject-cookies").addEventListener("click", function() {
-            setCookie("cookies_aceitos", "nao", 365); // Define o cookie por 1 ano, mas rejeitado
-            document.getElementById("cookie-popup").style.display = "none"; // Fecha o popup
-        });
-
-        // Chama a função para verificar o consentimento dos cookies quando a página carregar
-        checkCookieConsent();
-    </script>
 </body>
 </html>
+

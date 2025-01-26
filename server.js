@@ -27,6 +27,8 @@ const upload = multer({ storage: storage });
 // Configurando a pasta 'html' para ser servida como estática
 app.use(express.static(path.join(__dirname, 'html')));
 app.use('/img', express.static(path.join(__dirname, 'img')));
+app.use('/css', express.static(path.join(__dirname, 'css')));
+app.use('/script', express.static(path.join(__dirname, 'script')));
 
 // Rota para a página principal
 app.get('/', (req, res) => {
@@ -81,8 +83,14 @@ app.post('/enviar-email', upload.array('arquivos', 10), (req, res) => {
     const mailOptions = {
         from: email,  // E-mail do cliente
         to: 'arthurdev8@gmail.com',  // Seu e-mail
-        subject: 'Mensagem de Contato',
-        text: `Você recebeu uma nova mensagem de ${nome} (${email}):\n\n${mensagem}`,
+        html: `
+            <h3>Você recebeu uma nova mensagem de ${nome} (${email})</h3>
+            <p><strong>Mensagem:</strong> ${mensagem}</p>
+            <p><strong>Arquivos anexados:</strong></p>
+            <ul>
+                ${arquivos.map(file => `<li>${file.originalname}</li>`).join('')}
+            </ul>
+        `,
         attachments: anexos // Anexos enviados com o formulário
     };
 
@@ -93,8 +101,14 @@ app.post('/enviar-email', upload.array('arquivos', 10), (req, res) => {
             return res.status(500).send('Erro ao enviar o e-mail!');
         }
         console.log('E-mail enviado:', info.response);
-        res.status(200).send('Mensagem enviada com sucesso!');
+        res.redirect('/posenvio.html'); // Redireciona para a página de sucesso
     });
+});
+
+// Rota para a página posenvio.html
+app.get('/posenvio.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'html', 'posenvio.html'));
+    console.log('Página Posenvio carregada com sucesso!');
 });
 
 // Middleware de erro

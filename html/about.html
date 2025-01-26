@@ -3,82 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidade com navegadores antigos -->
-    <meta name="author" content="Padilha Advogados e Associados">
-    <meta name="description" content="Site oficial de Padilha Advogados e Associados, especializado em soluções jurídicas personalizadas.">
-    <meta name="keywords" content="advocacia, advogados, soluções jurídicas, serviços jurídicos, Padilha">
-    <meta property="og:title" content="Padilha Advogados e Associados">
-    <meta property="og:description" content="Especialistas em soluções jurídicas personalizadas.">
-    <meta property="og:image" content="URL_DA_IMAGEM"> <!-- Coloque o caminho da imagem aqui -->
-    <meta property="og:url" content=""> <!-- Coloque a URL do site aqui -->
-    <meta name="twitter:card" content="summary_large_image">  
-    <title>Padilha Advogados e Associados</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Padilha Advogados</title>
+    <link rel="stylesheet" href="/css/about.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="/img/img-logo-nova-guia-dourado.png" type="image/x-icon">
+
 </head>
-<body class="bg-cover bg-center bg-fixed bg-no-repeat" style="background-image: url('/public/img/logo-atualizada-sem-fundo.png'); background-size: 50%; height: 100vh;">
-    <div class="relative">
-        <!-- Navbar -->
-        <nav class="bg-blue-900 text-white shadow-lg z-50 relative">
-          <div class="container mx-auto px-6 flex justify-between items-center h-16">
-            <!-- Logo -->
-            <a href="#" class="text-3xl font-bold text-yellow-400 hover:text-yellow-500">
-              Padilha Advogados
-            </a>
-            
-            <!-- Links -->
-            <div class="hidden md:flex space-x-8">
-              <a href="http://localhost:3000/#home" class="hover:text-yellow-500 transition">Início</a>
-              <a href="http://localhost:3000/sobre" class="hover:text-yellow-500 transition">Sobre Nós</a><!-- Link para a seção sobre -->
-              <a href="http://localhost:3000/html/services.html" class="hover:text-yellow-500 transition">Serviços</a>
+<body class="body">
+  <div class="relative">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">PADILHA ADVOGADOS</a>
+        <div class="menu" id="menu">
+          <a href="/" class="menu-link">
+            <i class="fas fa-home"></i> Início
+          </a>
+          <a href="http://localhost:3000/sobre" class="menu-link">
+            <i class="fas fa-users"></i> Sobre Nós
+          </a>
+          <a href="/html/services.html" class="menu-link">
+            <i class="fas fa-briefcase"></i> Serviços
+          </a>
+          <a href="/html/talkme.html" class="menu-link">
+            <i class="fas fa-envelope"></i> Fale Conosco
+          </a>
+          
+        </div>
+      </div>
+    </nav>
+  </div>
+  
+  <!-- Seção "Sobre Nós" -->
+  <section id="sobre-nos" class="sobre-nos">
+    <h2 class="titulo">Sobre Nós</h2>
+    <p class="descricao">
+      Sou uma advogada especializada em oferecer soluções jurídicas personalizadas para meus clientes. Com um atendimento de qualidade e compromisso, busco sempre resolver as necessidades legais de forma eficiente e profissional.
+    </p>
+    
+    <!-- Missão e Valores -->
+    <div class="missao-valores">
+      <div class="missao">
+        <h3 class="missao-titulo">Minha Missão</h3>
+        <p class="missao-descricao">Fornecer serviços jurídicos com excelência, ética e comprometimento, garantindo sempre a satisfação e confiança dos meus clientes.</p>
+      </div>
       
-              <!-- Dropdown Menu -->
-              <div class="relative group">
-                <button class="flex items-center space-x-2 hover:text-yellow-500 transition">
-                  <span>Contato</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                  </svg>
-                </button>
-                <div class="absolute hidden group-hover:block bg-white text-gray-800 shadow-lg rounded-lg mt-2 w-56">
-                  <a href="http://localhost:3000/html/talkme.html" class="hover:text-yellow-500 transition">Fale Conosco</a>
-                  <a href="#email" class="block px-4 py-3 hover:bg-gray-100">Email</a>
-                  <a href="#telefone" class="block px-4 py-3 hover:bg-gray-100">Telefone</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-
-        <!-- Seção "Sobre Nós" -->
-        <section id="sobre-nos" class="pt-16 pb-12 px-4 text-center">
-          <h2 class="text-4xl font-semibold text-gray-800 mb-4">Sobre Nós</h2>
-          <p class="text-lg text-gray-600 mb-6">Somos uma equipe de advogados especializados em oferecer soluções jurídicas personalizadas para nossos clientes. Com um atendimento de qualidade e compromisso, buscamos sempre resolver as necessidades legais de forma eficiente e profissional.</p>
-          <div class="max-w-screen-lg mx-auto">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                <img src="path/to/your-image.jpg" alt="Advogado 1" class="w-full h-48 object-cover rounded-lg mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Advogado 1</h3>
-                <p class="text-gray-600">Especialista em direito civil, com mais de 10 anos de experiência.</p>
-              </div>
-              <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                <img src="path/to/your-image.jpg" alt="Advogado 2" class="w-full h-48 object-cover rounded-lg mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Advogado 2</h3>
-                <p class="text-gray-600">Especialista em direito empresarial, com foco em soluções para empresas.</p>
-              </div>
-              <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                <img src="path/to/your-image.jpg" alt="Advogado 3" class="w-full h-48 object-cover rounded-lg mb-4">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Advogado 3</h3>
-                <p class="text-gray-600">Especialista em direito trabalhista, com foco na defesa de direitos dos trabalhadores.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
+      <div class="valores">
+        <h3 class="valores-titulo">Meus Valores</h3>
+        <ul class="valores-lista">
+          <li>Ética</li>
+          <li>Transparência</li>
+          <li>Comprometimento</li>
+          <li>Respeito ao Cliente</li>
+        </ul>
+      </div>
     </div>
+
+    <!-- Seção de Áreas de Atuação -->
+    <section id="areas-de-atuacao" class="areas-de-atuacao">
+      <h2 class="titulo">Áreas de Atuação</h2>
+      <p class="descricao">Conheça as principais áreas em que atuo e como posso ajudá-lo a resolver suas questões jurídicas.</p>
+      
+      <div class="container">
+        <div class="grid">
+          <!-- Card Direito Previdenciário -->
+          <div class="card">
+            <h3 class="card-titulo">Direito Previdenciário</h3>
+            <p class="card-descricao">
+              Garanto que você tenha acesso aos benefícios da Previdência Social de forma justa e transparente. Seja aposentadoria, pensão ou auxílios, estou aqui para ajudá-lo.
+            </p>
+            <ul>
+              <li>Aposentadoria</li>
+              <li>Pensão por morte</li>
+              <li>Auxílio-doença</li>
+              <li>Revisões de benefícios</li>
+            </ul>
+          </div>
+          
+          <!-- Card Direito Bancário -->
+          <div class="card">
+            <h3 class="card-titulo">Direito Bancário</h3>
+            <p class="card-descricao">
+              Atuo em situações que envolvem instituições financeiras, garantindo que seus direitos como consumidor sejam preservados. Revisão de contratos, taxas abusivas e muito mais.
+            </p>
+            <ul>
+              <li>Revisão de contratos bancários</li>
+              <li>Empréstimos e financiamentos</li>
+              <li>Cobranças indevidas</li>
+              <li>Defesa contra juros abusivos</li>
+            </ul>
+          </div>
+          
+          <!-- Card Direito Trabalhista -->
+          <div class="card">
+            <h3 class="card-titulo">Direito Trabalhista</h3>
+            <p class="card-descricao">
+              Protejo os direitos do trabalhador e também oriento empregadores sobre suas obrigações legais, lidando com casos de rescisão, horas extras e indenizações.
+            </p>
+            <ul>
+              <li>Horas extras</li>
+              <li>Indenizações trabalhistas</li>
+              <li>Ação de assédio moral</li>
+              <li>Consultoria para contratos de trabalho</li>
+            </ul>
+          </div>
+          
+          <!-- Card Direito Imobiliário -->
+          <div class="card">
+            <h3 class="card-titulo">Direito Imobiliário</h3>
+            <p class="card-descricao">
+              Ajudarei na compra e venda de imóveis, regularização de documentos e contratos de locação. Meu objetivo é garantir segurança jurídica nas transações imobiliárias.
+            </p>
+            <ul>
+              <li>Compra e venda de imóveis</li>
+              <li>Contratos de locação</li>
+              <li>Ações de despejo</li>
+              <li>Regularização de imóveis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-titulo"><i class="fas fa-gavel"></i> Direito Trabalhista</h3>
+        <p class="card-descricao">
+          Protejo os direitos do trabalhador e também oriento empregadores sobre suas obrigações legais, lidando com casos de rescisão, horas extras e indenizações.
+        </p>
+        <ul>
+          <li>Horas extras</li>
+          <li>Indenizações trabalhistas</li>
+          <li>Ação de assédio moral</li>
+          <li>Consultoria para contratos de trabalho</li>
+        </ul>
+        <a href="#agendar-consulta" class="btn-acao">Agendar Consulta</a>
+      </div>
+      
+      <!-- Card Direito Imobiliário -->
+      <div class="card">
+        <h3 class="card-titulo"><i class="fas fa-home"></i> Direito Imobiliário</h3>
+        <p class="card-descricao">
+          Ajudarei na compra e venda de imóveis, regularização de documentos e contratos de locação. Meu objetivo é garantir segurança jurídica nas transações imobiliárias.
+        </p>
+        <ul>
+          <li>Compra e venda de imóveis</li>
+          <li>Contratos de locação</li>
+          <li>Ações de despejo</li>
+          <li>Regularização de imóveis</li>
+        </ul>
+        <a href="#agendar-consulta" class="btn-acao">Agendar Consulta</a>
+      </div>
+      
+    </section>
+</section>
+
+
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-left">
+          <p class="footer-text">&copy; © 2025 Padilha Advogados. Todos os direitos reservados.
+            OAB: 99376/RS</p>
+        </div>
+        <div class="footer-right">
+          <h3 class="footer-heading">Contatos</h3>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/+5551991506782" class="footer-link"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+            <li><a href="mailto:jovitapadilhaadv@gmail.com" class="footer-link"><i class="fas fa-envelope"></i> Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
