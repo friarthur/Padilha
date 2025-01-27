@@ -4,6 +4,8 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const fs = require('fs');
+require('dotenv').config(); // Configuração do dotenv para variáveis de ambiente
+
 const app = express();
 
 // Configuração do body-parser para processar dados do formulário
@@ -64,13 +66,12 @@ app.post('/enviar-email', upload.array('arquivos', 10), (req, res) => {
         return res.status(400).send('Nenhum arquivo enviado.');
     }
 
-    // Configuração do transportador de e-mail (usando o Gmail no exemplo)
-    require('dotenv').config();
+    // Configuração do transportador de e-mail usando variáveis de ambiente
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'arthurdev8@gmail.com', // Substitua pelo seu e-mail
-            pass: 'pymb qygg sdia siyh'   // Substitua pela sua senha ou senha de aplicativo
+            user: process.env.EMAIL_USER='arthurdev8@gmail.com', // E-mail configurado no .env
+        pass: process.env.EMAIL_PASS='pymb qygg sdia siyh'   // Senha do app configurada via dotenv
         }
     });
 
@@ -83,7 +84,8 @@ app.post('/enviar-email', upload.array('arquivos', 10), (req, res) => {
     // Opções de e-mail
     const mailOptions = {
         from: email,  // E-mail do cliente
-        to: 'arthurdev8@gmail.com',  // Seu e-mail
+        to: process.env.EMAIL_USER='arthurdev8@gmail.com',  // Seu e-mail
+        subject: `Nova mensagem de contato - ${nome}`,
         html: `
             <h3>Você recebeu uma nova mensagem de ${nome} (${email})</h3>
             <p><strong>Mensagem:</strong> ${mensagem}</p>
@@ -118,8 +120,8 @@ app.use((err, req, res, next) => {
     res.status(500).send('Algo deu errado!');
 });
 
-// Iniciando o servidor
-const port = 3000;
+// Porta configurada a partir de variável de ambiente ou padrão
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
 });
