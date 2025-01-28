@@ -2,6 +2,12 @@
 2-teste em produção
 3-conectar com o domínio do cliente
 
+Objetivo agora rafael:
+- ajustar o css para mobile 
+-fazer alguns ajustes pequenos no css principalmente no footes e no card do arquivo about.html e é isso
+
+
+
 
 server.js funcional 
 const express = require('express');
