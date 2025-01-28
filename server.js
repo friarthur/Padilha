@@ -1,10 +1,11 @@
 const express = require('express');
 const path = require('path');
-const nodemailer = require('nodemailer');
+
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const fs = require('fs');
-require('dotenv').config(); // Configuração do dotenv para variáveis de ambiente
+require('dotenv').config();
+
 
 const app = express();
 
@@ -26,101 +27,35 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-// Configurando a pasta 'html' para ser servida como estática
+// Configurando pastas estáticas
 app.use(express.static(path.join(__dirname, 'html')));
 app.use('/img', express.static(path.join(__dirname, 'img')));
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/script', express.static(path.join(__dirname, 'script')));
 
-// Rota para a página principal
+// Rotas para páginas HTML
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
     console.log('Página principal carregada com sucesso!');
 });
 
-// Rota para a página talkme.html
 app.get('/html/talkme.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'html', 'talkme.html'));
     console.log('Página Talk Me carregada com sucesso!');
 });
 
-// Rota para a página services.html
 app.get('/html/services.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'html', 'services.html'));
     console.log('Página Services carregada com sucesso!');
 });
 
-// Rota para a página sobre
 app.get('/sobre', (req, res) => {
     res.sendFile(path.join(__dirname, 'html', 'about.html'));
     console.log('Página Sobre carregada com sucesso!');
 });
 
-// Rota para o envio do formulário de contato com upload de arquivos
-app.post('/enviar-email', upload.array('arquivos', 10), (req, res) => {
-    const { nome, email, mensagem } = req.body;
-    const arquivos = req.files; // Acessa os arquivos enviados
 
-    // Verifica se algum arquivo foi enviado
-    if (!arquivos || arquivos.length === 0) {
-        return res.status(400).send('Nenhum arquivo enviado.');
-    }
-
-    // Configuração do transportador de e-mail usando variáveis de ambiente
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.EMAIL_USER='arthurdev8@gmail.com', // E-mail configurado no .env
-        pass: process.env.EMAIL_PASS='pymb qygg sdia siyh'   // Senha do app configurada via dotenv
-        }
-    });
-
-    // Configuração dos anexos com base nos arquivos enviados
-    const anexos = arquivos.map(arquivo => ({
-        filename: arquivo.originalname,
-        path: arquivo.path
-    }));
-
-    // Opções de e-mail
-    const mailOptions = {
-        from: email,  // E-mail do cliente
-        to: process.env.EMAIL_USER='arthurdev8@gmail.com',  // Seu e-mail
-        subject: `Nova mensagem de contato - ${nome}`,
-        html: `
-            <h3>Você recebeu uma nova mensagem de ${nome} (${email})</h3>
-            <p><strong>Mensagem:</strong> ${mensagem}</p>
-            <p><strong>Arquivos anexados:</strong></p>
-            <ul>
-                ${arquivos.map(file => `<li>${file.originalname}</li>`).join('')}
-            </ul>
-        `,
-        attachments: anexos // Anexos enviados com o formulário
-    };
-
-    // Enviar o e-mail
-    transporter.sendMail(mailOptions, (err, info) => {
-        if (err) {
-            console.error('Erro ao enviar e-mail:', err);
-            return res.status(500).send('Erro ao enviar o e-mail!');
-        }
-        console.log('E-mail enviado:', info.response);
-        res.redirect('/posenvio.html'); // Redireciona para a página de sucesso
-    });
-});
-
-// Rota para a página posenvio.html
-app.get('/posenvio.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html', 'posenvio.html'));
-    console.log('Página Posenvio carregada com sucesso!');
-});
-
-// Middleware de erro
-app.use((err, req, res, next) => {
-    console.error('Erro ao carregar a página:', err);
-    res.status(500).send('Algo deu errado!');
-});
-
-// Porta configurada a partir de variável de ambiente ou padrão
+// Configuração da porta
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
