@@ -4,7 +4,8 @@
 
 Objetivo agora rafael:
 - ajustar o css para mobile 
--fazer alguns ajustes pequenos no css principalmente no footes e no card do arquivo about.html e é isso
+-fazer alguns ajustes pequenos no css principalmente no footes e no card do arquivo about.html 
+-ajuste a rota do index para o about.html pela mor de deus sem paciencia para isso
 
 
 
