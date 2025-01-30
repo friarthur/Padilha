@@ -5,34 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Padilha Advogados</title>
     <link rel="stylesheet" href="/css/about.css">
+    <link rel="icon" href="/img/logo-f.png" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 </head>
 <body class="body">
-  <div class="relative">
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="container">
-        <a href="#" class="logo">PADILHA ADVOGADOS</a>
-        <div class="menu" id="menu">
-          <a href="/" class="menu-link">
-            <i class="fas fa-home"></i> Início
+  <div class="navigation">
+    <div class="container">
+      <img src="/img/apresentação 3.png" alt="">
+      <ul>
+        <li class="list">
+          <a href="/index.html">
+            <span class="icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <span class="text">Inicio</span>
           </a>
-          <a href="/html/about.html" class="menu-link">
-            <i class="fas fa-users"></i> Sobre Nós
+        </li>
+        
+        <li class="list">
+          <a href="/html/about.html">
+            <span class="icon">
+              <ion-icon name="accessibility-outline"></ion-icon>
+            </span>
+            <span class="text">Sobre a Empresa</span>
           </a>
-          <a href="/html/services.html" class="menu-link">
-            <i class="fas fa-briefcase"></i> Serviços
+        </li>
+        <li class="list">
+          <a href="/html/services.html">
+            <span class="icon">
+              <ion-icon name="people-circle-outline"></ion-icon>
+            </span>
+            <span class="text">Serviços</span>
           </a>
-          <a href="/html/talkme.html" class="menu-link">
-            <i class="fas fa-envelope"></i> Fale Conosco
+        </li>
+        <li class="list">
+          <a href="/html/talkme.html">
+            <span class="icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </span>
+            <span class="text">Fale Conosco</span>
           </a>
-          
-        </div>
-      </div>
-    </nav>
-  </div>
+        </li>
   
+      </ul>
+    </div>
+  </div>
   <!-- Seção "Sobre Nós" -->
   <section id="sobre-nos" class="sobre-nos">
     <h2 class="titulo">Sobre Nós</h2>
@@ -120,37 +138,39 @@
               <li>Regularização de imóveis</li>
             </ul>
           </div>
+          <div class="card">
+            <h3 class="card-titulo"><i class="fas fa-gavel"></i> Direito Trabalhista</h3>
+            <p class="card-descricao">
+              Protejo os direitos do trabalhador e também oriento empregadores sobre suas obrigações legais, lidando com casos de rescisão, horas extras e indenizações.
+            </p>
+            <ul>
+              <li>Horas extras</li>
+              <li>Indenizações trabalhistas</li>
+              <li>Ação de assédio moral</li>
+              <li>Consultoria para contratos de trabalho</li>
+            </ul>
+            <a href="https://wa.me/+5551991506782" class="btn-acao">Agendar Consulta</a>
+          </div>
+          
+          <!-- Card Direito Imobiliário -->
+          <div class="card">
+            <h3 class="card-titulo"><i class="fas fa-home"></i> Direito Imobiliário</h3>
+            <p class="card-descricao">
+              Ajudarei na compra e venda de imóveis, regularização de documentos e contratos de locação. Meu objetivo é garantir segurança jurídica nas transações imobiliárias.
+            </p>
+            <ul>
+              <li>Compra e venda de imóveis</li>
+              <li>Contratos de locação</li>
+              <li>Ações de despejo</li>
+              <li>Regularização de imóveis</li>
+            </ul>
+            <a href="https://wa.me/+5551991506782" class="btn-acao">Agendar Consulta</a>
+          </div>
+          
         </div>
+        
       </div>
-      <div class="card">
-        <h3 class="card-titulo"><i class="fas fa-gavel"></i> Direito Trabalhista</h3>
-        <p class="card-descricao">
-          Protejo os direitos do trabalhador e também oriento empregadores sobre suas obrigações legais, lidando com casos de rescisão, horas extras e indenizações.
-        </p>
-        <ul>
-          <li>Horas extras</li>
-          <li>Indenizações trabalhistas</li>
-          <li>Ação de assédio moral</li>
-          <li>Consultoria para contratos de trabalho</li>
-        </ul>
-        <a href="#agendar-consulta" class="btn-acao">Agendar Consulta</a>
-      </div>
-      
-      <!-- Card Direito Imobiliário -->
-      <div class="card">
-        <h3 class="card-titulo"><i class="fas fa-home"></i> Direito Imobiliário</h3>
-        <p class="card-descricao">
-          Ajudarei na compra e venda de imóveis, regularização de documentos e contratos de locação. Meu objetivo é garantir segurança jurídica nas transações imobiliárias.
-        </p>
-        <ul>
-          <li>Compra e venda de imóveis</li>
-          <li>Contratos de locação</li>
-          <li>Ações de despejo</li>
-          <li>Regularização de imóveis</li>
-        </ul>
-        <a href="#agendar-consulta" class="btn-acao">Agendar Consulta</a>
-      </div>
-      
+     
     </section>
 </section>
 
@@ -167,7 +187,7 @@
           <h3 class="footer-heading">Contatos</h3>
           <ul class="footer-links">
             <li><a href="https://wa.me/+5551991506782" class="footer-link"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-            <li> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jovitapadilhaadv@gmail.com&su=Contato%20pelo%20Site&body=Prezado(a),%0A%0AEspero%20que%20este%20e-mail%20o(a)%20encontre%20bem.%0A%0AGostaria%20de%20entrar%20em%20contato%20para%20discutirmos%20sobre%20(tema%20ou%20assunto%20de%20interesse).%0A%0AFico%20no%20aguardo%20de%20sua%20resposta.%0A%0AAtenciosamente,%0A[Seu%20Nome]" class="button-email">
+            <li> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jovitapadilhaadv@gmail.com&su=Contato%20pelo%20Site&body=Prezado(a),%0A%0AEspero%20que%20este%20e-mail%20o(a)%20encontre%20bem.%0A%0AGostaria%20de%20entrar%20em%20contato%20para%20discutirmos%20sobre%20(tema%20ou%20assunto%20de%20interesse).%0A%0AFico%20no%20aguardo%20de%20sua%20resposta.%0A%0AAtenciosamente,%0A[Seu%20Nome]" class="footer-link">
               <i class="fab fa-google"></i> Enviar E-mail
           </a></li>
           </ul>
@@ -175,5 +195,7 @@
       </div>
     </div>
   </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

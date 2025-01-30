@@ -6,6 +6,14 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+:root{
+  --color-one: #6F2C3E;
+  --color-two: #fff;
+  --color-tree: #FFC300;
+  --color-fowr:  #4A4A4A;
+  --color-five: #333;
+  --color-six: #FFD700;
+}
 /* Body */
 .html, body{
   overflow: auto;
@@ -24,8 +32,8 @@
 }
 
 body.bg-cover {
-  background-image: url('/public/img/logo-atualizada-sem-fundo.png');
-  background-size: 50%;
+  background-image: url('/img/logo-f.png');
+  background-size: 10%;
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
@@ -33,109 +41,110 @@ body.bg-cover {
 }
 
 /* Navbar */
-.navbar {
-  background-color: #6F2C3E;
-  color: white;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.navigation {
   position: relative;
-  z-index: 50;
+  width: 100%;
+  height: 100px;
+  background: var(--color-one);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+.navigation img {
+ width:250px;
+ margin:0 10px
+  
+}
+
+
+.navigation ul{
+  display: flex;
+  width: -40px;
+  margin-left: 880px;
+}
+
+
+.navigation ul li{
+  position: relative;
+  list-style: none;
+  width: 7rem;
+  height: 70px;
+  z-index: 1;
+}
+
+
+.navigation ul li a{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  color: var(--color-two);
+    
+}
+
+.navigation ul li a .icon{
+  position: relative;
+  display: block;
+  line-height: 85px;
+  font-size: 2rem;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--color-two);
+}
+
+.navigation ul li:hover a .icon{
+  transform: translateY(-35px);  color: #FFD700;
+}
+
+.navigation ul li a .text{
+  position: absolute;
+  color: var(--color-two);
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.navigation ul li:hover a .text{
+opacity: 1;
+transform: translateY(10px);
+}
+
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
+  max-width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 64px;
+  
 }
 
+
+
 .logo {
-  font-size: 24px;
+  margin-left: 20px;
+  width: 10px;
+  font-size: 30px;
   font-weight: bold;
-  color: #FFD700;
+  color: var(--color-six);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .logo:hover {
-  color: #FFC300;
-}
-
-/* Menu */
-.menu {
-  display: flex;
-  gap: 32px;
-}
-
-.menu-link {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.menu-link:hover {
-  color: #FFD700;
-}
-
-/* Dropdown */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-button {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: color 0.3s;
-}
-
-.dropdown-button:hover {
-  color: #FFD700;
-}
-
-.dropdown-icon {
-  width: 20px;
-  height: 20px;
-}
-
-.dropdown-content {
-  position: absolute;
-  display: none;
-  background-color: white;
-  color: black;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  margin-top: 8px;
-  width: 224px;
-  z-index: 100;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 12px 16px;
-  text-decoration: none;
-  color: black;
-}
-
-.dropdown-content a:hover {
-  background-color: #f0f0f0;
-}
-
-/* Dropdown Hover Effect */
-.dropdown:hover .dropdown-content {
-  display: block;
+  color: var(--color-tree);
 }
 /* Section Hero */
 .hero-section {
   position: relative;
   height: 60vh;
-  background-image: url('/img/logo-com-fundo-image-cidade-porto-alegre.png');
+  background-image: url('/img/Fundo\ Porto\ Alegre\ em\ branco.png');
   background-size: cover;
   background-position: center;
 }
@@ -265,9 +274,12 @@ body.bg-cover {
 /* Grid de Serviços */
 .services-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  justify-content: center;
   gap: 2rem;
   margin-top: 2.5rem;
+  justify-content: center; /* Centraliza os cards */
+    align-items: stretch; /* Mantém os cards alinhados */
 }
 
 @media (min-width: 640px) {
@@ -291,6 +303,8 @@ body.bg-cover {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
   border: 1px solid #f0f0f0;
+  flex-direction: column;
+    justify-content: space-between;
 }
 
 .service-card:hover {
