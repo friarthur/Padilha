@@ -15,23 +15,15 @@
   --color-six: #FFD700;
 }
 /* Body */
-.html, body{
-  overflow: auto;
-  scroll-behavior: smooth;
-  
-}
-.hidden {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 
+body.bg-cover {
+  background-size: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
 
 /* Navbar */
 .navigation {
@@ -44,23 +36,24 @@
   justify-content: space-between;
 }
 .navigation img {
- width:250px;
- margin:0 10px
-  
+width:250px;
+padding: 12px;
+margin: 22px;
+
 }
 
 
 .navigation ul{
   display: flex;
-  width: -40px;
-  margin-left: 880px;
+  width: -20px;
+  margin-left: 660px;
 }
 
 
 .navigation ul li{
   position: relative;
   list-style: none;
-  width: 7rem;
+  width: 4.7rem;
   height: 70px;
   z-index: 1;
 }
@@ -90,7 +83,7 @@
 }
 
 .navigation ul li:hover a .icon{
-  transform: translateY(-35px);  color: #FFD700;
+  transform: translateY(-35px);  color: var(--color-six);
 }
 
 .navigation ul li a .text{
@@ -133,10 +126,12 @@ transform: translateY(10px);
 .logo:hover {
   color: var(--color-tree);
 }
+
 /* Section Hero */
 .hero-section {
   position: relative;
-  height: 60vh;
+  height: 80vh;
+  width: 100%;
   background-image: url('/img/Fundo\ Porto\ Alegre\ em\ branco.png');
   background-size: cover;
   background-position: center;
@@ -145,7 +140,7 @@ transform: translateY(10px);
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: black;
+  background-color: var(--color-five);
   opacity: 0.5;
 }
 
@@ -159,7 +154,7 @@ transform: translateY(10px);
 }
 
 .hero-box {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color:rgba(255, 255, 255, 0.8);
   padding: 32px;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -238,7 +233,6 @@ transform: translateY(10px);
   text-decoration: none;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
-  margin-left: 41%;
 }
 
 .presentation-button:hover {
@@ -286,6 +280,7 @@ transform: translateY(10px);
 @media (min-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
+    margin: 0px 50px;
   }
 }
 
@@ -624,62 +619,3 @@ transform: translateY(10px);
   width: 35px;
   height: 35px;
 }
-@media only screen and (max-width: 767px) {
-  .navigation {
-    height: 60px; /* Altura ainda menor para celulares */
-
-  }
-
-  .navigation img {
-    width: 120px; /* Logo ainda menor para celulares */
-  }
-
-  /* Exibe um ícone de menu (hamburguer) para celulares */
-  .menu-icon {
-    display: block;
-    font-size: 2rem;
-    color: var(--color-two);
-    cursor: pointer;
-  }
-
-  /* Estilos para o menu quando aberto em celulares */
-  .navigation.active ul {
-    display: flex;
-    flex-direction: column; /* Menu em coluna */
-    position: absolute;
-    top: 60px; /* Posiciona o menu abaixo da barra de navegação */
-    left: 0;
-    width: 100%;
-    background: var(--color-one);
-    margin: 0;
-    padding: 0;
-  }
-
-  .navigation.active ul li {
-    width: 100%; /* Largura total para cada item do menu */
-    height: auto;
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  .navigation.active ul li a {
-    padding: 10px 0; /* Espaçamento interno para os links */
-  }
-
-  .navigation.active ul li a .icon {
-    line-height: 40px; /* Ajusta a altura do ícone */
-    font-size: 1.5rem;
-  }
-
-  .navigation.active ul li:hover a .icon {
-    transform: translateY(0); /* Remove a animação de subir */
-    color: var(--color-two);
-  }
-
-  .navigation.active ul li a .text {
-    opacity: 1; /* Mostra o texto sempre */
-    transform: translateY(0); /* Remove a animação */
-    font-size: 0.9rem;
-  }
-}
-
