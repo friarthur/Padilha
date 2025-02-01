@@ -42,23 +42,23 @@
     justify-content: space-between;
   }
   .navigation img {
-   width:250px;
-   margin:0 10px
-    
+    width: 250px;
+      margin: 22px;
+      padding: 12px;
   }
+  
   
   
   .navigation ul{
     display: flex;
-    width: -40px;
-    margin-left: 880px;
+    width: -20px;
+    margin-left: 660px;
   }
-  
   
   .navigation ul li{
     position: relative;
     list-style: none;
-    width: 4.7rem;
+    width: 4.5rem;
     height: 70px;
     z-index: 1;
   }
