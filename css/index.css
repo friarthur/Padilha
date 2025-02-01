@@ -279,6 +279,7 @@ transform: translateY(10px);
 @media (min-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
+    margin: 0px 50px;
   }
 }
 
