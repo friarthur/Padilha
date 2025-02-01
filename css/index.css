@@ -226,6 +226,7 @@ transform: translateY(10px);
   font-size: 16px;
   color: #666;
   margin-bottom: 16px;
+  text-align: justify;
 }
 
 .presentation-button {

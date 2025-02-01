@@ -126,8 +126,9 @@ transform: translateY(10px);
   color: var(--color-tree);
 }
 
-/* Seção "Sobre Nós" */
+
 /* Estilo geral da seção "Sobre Nós" */
+
 .sobre-nos {
   padding: 40px 20px;
   background-color: #f9f9f9;
