@@ -31,14 +31,7 @@
   transform: translateY(0);
 }
 
-body.bg-cover {
-  background-image: url('/img/logo-f.png');
-  background-size: 10%;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-}
+
 
 /* Navbar */
 .navigation {
@@ -244,6 +237,7 @@ transform: translateY(10px);
   text-decoration: none;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
+  margin-left: 41%;
 }
 
 .presentation-button:hover {
@@ -629,3 +623,62 @@ transform: translateY(10px);
   width: 35px;
   height: 35px;
 }
+@media only screen and (max-width: 767px) {
+  .navigation {
+    height: 60px; /* Altura ainda menor para celulares */
+
+  }
+
+  .navigation img {
+    width: 120px; /* Logo ainda menor para celulares */
+  }
+
+  /* Exibe um ícone de menu (hamburguer) para celulares */
+  .menu-icon {
+    display: block;
+    font-size: 2rem;
+    color: var(--color-two);
+    cursor: pointer;
+  }
+
+  /* Estilos para o menu quando aberto em celulares */
+  .navigation.active ul {
+    display: flex;
+    flex-direction: column; /* Menu em coluna */
+    position: absolute;
+    top: 60px; /* Posiciona o menu abaixo da barra de navegação */
+    left: 0;
+    width: 100%;
+    background: var(--color-one);
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation.active ul li {
+    width: 100%; /* Largura total para cada item do menu */
+    height: auto;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .navigation.active ul li a {
+    padding: 10px 0; /* Espaçamento interno para os links */
+  }
+
+  .navigation.active ul li a .icon {
+    line-height: 40px; /* Ajusta a altura do ícone */
+    font-size: 1.5rem;
+  }
+
+  .navigation.active ul li:hover a .icon {
+    transform: translateY(0); /* Remove a animação de subir */
+    color: var(--color-two);
+  }
+
+  .navigation.active ul li a .text {
+    opacity: 1; /* Mostra o texto sempre */
+    transform: translateY(0); /* Remove a animação */
+    font-size: 0.9rem;
+  }
+}
+

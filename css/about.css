@@ -219,7 +219,7 @@ transform: translateY(10px);
 /* Grid e Cards */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  grid-template-columns: repeat(2, 2fr); /* 3 colunas */
   justify-content: center;
   gap: 2rem;
   margin-top: 2.5rem;
@@ -236,6 +236,10 @@ transform: translateY(10px);
   text-align: left;
   width: 100%;
   max-width: 300px;
+}
+.card-icon {
+  font-size: 2rem;
+  color: #6F2C3E; /* Cor principal do site */
 }
 
 .card:hover {
