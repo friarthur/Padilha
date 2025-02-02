@@ -14,15 +14,17 @@
   --color-five: #333;
   --color-six: #FFD700;
 }
+
+
 /* Body */
-
-
-body.bg-cover {
+.bg-cover {
   background-size: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  object-fit: cover;
+
 }
 
 /* Navbar */
@@ -35,6 +37,9 @@ body.bg-cover {
   align-items: center;
   justify-content: space-between;
 }
+
+
+
 .navigation img {
 width:250px;
 padding: 12px;
@@ -612,3 +617,24 @@ transform: translateY(10px);
   width: 35px;
   height: 35px;
 }
+
+
+//responsividade por seção
+
+/* Responsive body */
+
+  .bg-cover{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 50px);    
+  
+
+@media only screen and (min-width: 600px){
+   /* for mobiles phone */
+  [class*="bg-cover"]{
+    width: 100vw;
+  }
+}
+  
+}
+

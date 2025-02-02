@@ -2,8 +2,7 @@
 
 ***
 
-Este projeto visa refatorar o projeto criado por  [Arthur Reis](https://github.com/friarthur) , [Rafael Soares](https://github.com/rafaelrss41)
-, fundadores da Mod-up Tecnologia.<br>
+Este projeto visa refatorar o projeto criado por  [Arthur Reis](https://github.com/friarthur) , [Rafael Soares](https://github.com/rafaelrss41), [Ezequiel Adriel Leite](https://github.com/ezequielfarias). fundadores e colaboradores da Mod-up Tecnologia.<br>
 O refactor visa melhorar o código e entregar um projeto mais profissional visando uma melhor experiência para o cliente.
 
 ***
@@ -15,6 +14,6 @@ O refactor visa melhorar o código e entregar um projeto mais profissional visan
 
 
 ***
-:rocket: *index.hmtl* refatorado na classe nav-bar
+:rocket: *index.hmtl* 'refatorado na classe nav-bar'
 
 :rocket: *index.css* 'barra de navegação refatorada'
