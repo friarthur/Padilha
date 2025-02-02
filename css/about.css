@@ -1,15 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 /* Reset e Estilos Básicos */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
 :root{
   --color-one: #6F2C3E;
   --color-two: #fff;
@@ -17,13 +17,17 @@ body {
   --color-fowr:  #4A4A4A;
   --color-five: #333;
   --color-six: #FFD700;
+  --color-seven: #f4f4f4;
+
 }
 
-.container {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1200px;
+body {
+  background-color: var(--color-seven);
+  color: var(--color-fowr);
+  
 }
+
+
 
 /* Navbar */
 .navigation {
@@ -36,11 +40,11 @@ body {
   justify-content: space-between;
 }
 .navigation img {
-  width: 250px;
-    margin: 22px;
-    padding: 12px;
+  width:250px;
+  padding: 12px;
+  margin: 22px;
+  
 }
-
 
 
 .navigation ul{
@@ -49,10 +53,11 @@ body {
   margin-left: 660px;
 }
 
+
 .navigation ul li{
   position: relative;
   list-style: none;
-  width: 4.5rem;
+  width: 6rem;
   height: 70px;
   z-index: 1;
 }
@@ -82,7 +87,7 @@ body {
 }
 
 .navigation ul li:hover a .icon{
-  transform: translateY(-35px);  color: #FFD700;
+  transform: translateY(-35px);  color: var(--color-six);
 }
 
 .navigation ul li a .text{
@@ -126,9 +131,8 @@ transform: translateY(10px);
   color: var(--color-tree);
 }
 
-
+/* Seção "Sobre Nós" */
 /* Estilo geral da seção "Sobre Nós" */
-
 .sobre-nos {
   padding: 40px 20px;
   background-color: #f9f9f9;
@@ -139,6 +143,8 @@ transform: translateY(10px);
   font-size: 2rem;
   color: #6f2c3e;
   margin-bottom: 20px;
+  font-size: 50px;
+  text-transform: uppercase;
 }
 
 .descricao {
@@ -220,7 +226,7 @@ transform: translateY(10px);
 /* Grid e Cards */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 2fr); /* 3 colunas */
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
   justify-content: center;
   gap: 2rem;
   margin-top: 2.5rem;
@@ -237,10 +243,6 @@ transform: translateY(10px);
   text-align: left;
   width: 100%;
   max-width: 300px;
-}
-.card-icon {
-  font-size: 2rem;
-  color: #6F2C3E; /* Cor principal do site */
 }
 
 .card:hover {

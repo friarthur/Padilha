@@ -14,23 +14,17 @@
   --color-fowr:  #4A4A4A;
   --color-five: #333;
   --color-six: #FFD700;
-}
-.html, body{
-  overflow: auto;
-  scroll-behavior: smooth;
-  
-}
-.hidden {
-  
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
 
-.visible {
-  
-  transform: translateY(0);
-}
-
+body {
+    
+    font-family: "Poppins", sans-serif;
+    background-image: url('/img/logo-f.png');
+    background-size: 10%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
   
   .navigation {
     position: relative;
@@ -42,27 +36,26 @@
     justify-content: space-between;
   }
   .navigation img {
-    width: 250px;
-      margin: 22px;
-      padding: 12px;
+   width:250px;
+   margin:0 10px
+    
   }
-  
   
   
   .navigation ul{
     display: flex;
-    width: -20px;
-    margin-left: 660px;
+    width: -40px;
+    margin-left: 880px;
   }
+  
   
   .navigation ul li{
     position: relative;
     list-style: none;
-    width: 4.5rem;
+    width: 7rem;
     height: 70px;
     z-index: 1;
   }
-  
   
   
   .navigation ul li a{
@@ -89,7 +82,7 @@
   }
   
   .navigation ul li:hover a .icon{
-    transform: translateY(-35px);  color: #FFD700;
+    transform: translateY(-35px);  color: var(--color-six);
   }
   
   .navigation ul li a .text{
@@ -175,7 +168,6 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
-  
   /* Service Card Styles */
   .service-card {
     background-color: white;
@@ -189,7 +181,7 @@
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #6F2C3E;
+    color: var(--color-one);
   }
   
   .service-card p {
@@ -251,7 +243,7 @@
 
 .localization h2 {
   font-size: 2rem;
-  color: #6f2c3e;
+  color: var(--color-one);
   margin-bottom: 0.5rem;
   text-align: center;
 }
@@ -330,6 +322,8 @@
 .card-address .btn-map:hover {
   background-color: #5a2333;
 }
+
+
 /* Footer */
 .footer {
   background-color: #2D2D2D;
@@ -407,5 +401,6 @@
   margin-right: 0.5rem;
 }
 
-  
+}
+
   

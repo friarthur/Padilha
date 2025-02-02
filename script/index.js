@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Aceitar cookies
   acceptButton.addEventListener("click", () => {
-    setCookie("cookie_consent", "accepted", 1); 
+    setCookie("cookie_consent", "accepted", 365); // Define o consentimento por 1 ano
     cookiePopup.style.display = "none"; // Esconde o pop-up
   });
 
