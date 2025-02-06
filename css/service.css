@@ -14,123 +14,120 @@
   --color-fowr:  #4A4A4A;
   --color-five: #333;
   --color-six: #FFD700;
+}
+.html, body{
+  overflow: auto;
+  scroll-behavior: smooth;
+  
+}
+.hidden {
+  
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
 
-body {
+.visible {
+  
+  transform: translateY(0);
+}
+
+  
+  /* Navbar */
+.navigation {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background: var(--color-one);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.navigation img {
+width:250px;
+padding: 12px;
+margin: 22px;
+
+}
+
+
+.navigation ul{
+  display: flex;
+  width: -20px;
+  margin-left: 660px;
+}
+
+
+.navigation ul li{
+  position: relative;
+  list-style: none;
+  width: 6rem;
+  height: 70px;
+  z-index: 1;
+}
+
+
+.navigation ul li a{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  color: var(--color-two);
     
-    font-family: "Poppins", sans-serif;
-    background-image: url('/img/logo-f.png');
-    background-size: 10%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-  }
+}
+
+.navigation ul li a .icon{
+  position: relative;
+  display: block;
+  line-height: 85px;
+  font-size: 2rem;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--color-two);
+}
+
+.navigation ul li:hover a .icon{
+  transform: translateY(-35px);  color: var(--color-six);
+}
+
+.navigation ul li a .text{
+  position: absolute;
+  color: var(--color-two);
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.navigation ul li:hover a .text{
+opacity: 1;
+transform: translateY(10px);
+}
+
+
+.container {
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-  .navigation {
-    position: relative;
-    width: 100%;
-    height: 100px;
-    background: var(--color-one);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .navigation img {
-   width:250px;
-   margin:0 10px
-    
-  }
-  
-  
-  .navigation ul{
-    display: flex;
-    width: -40px;
-    margin-left: 880px;
-  }
-  
-  
-  .navigation ul li{
-    position: relative;
-    list-style: none;
-    width: 7rem;
-    height: 70px;
-    z-index: 1;
-  }
-  
-  
-  .navigation ul li a{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-    color: var(--color-two);
-      
-  }
-  
-  .navigation ul li a .icon{
-    position: relative;
-    display: block;
-    line-height: 85px;
-    font-size: 2rem;
-    text-align: center;
-    transition: 0.5s;
-    color: var(--color-two);
-  }
-  
-  .navigation ul li:hover a .icon{
-    transform: translateY(-35px);  color: var(--color-six);
-  }
-  
-  .navigation ul li a .text{
-    position: absolute;
-    color: var(--color-two);
-    font-weight: 400;
-    font-size: 1rem;
-    letter-spacing: 0.05rem;
-    transition: 0.5s;
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  
-  .navigation ul li:hover a .text{
-  opacity: 1;
-  transform: translateY(10px);
-  }
-  
-  
-  .container {
-    max-width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  
-  
-  
-  .logo {
-    margin-left: 20px;
-    width: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    color: var(--color-six);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .logo:hover {
-    color: var(--color-tree);
-  }
+}
+
   /* Hero Section */
 .hero {
-    background-color: #6F2C3E;
-    color: white;
+    
+    color: var(--color-one);
     padding: 4rem 0;
     text-align: center;
+    margin-top: 5%;
   }
   
   .container-hero h1 {
@@ -168,6 +165,7 @@ body {
       grid-template-columns: repeat(3, 1fr);
     }
   }
+  
   /* Service Card Styles */
   .service-card {
     background-color: white;
@@ -181,7 +179,7 @@ body {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: var(--color-one);
+    color: #6F2C3E;
   }
   
   .service-card p {
@@ -243,7 +241,7 @@ body {
 
 .localization h2 {
   font-size: 2rem;
-  color: var(--color-one);
+  color: #6f2c3e;
   margin-bottom: 0.5rem;
   text-align: center;
 }
@@ -322,8 +320,6 @@ body {
 .card-address .btn-map:hover {
   background-color: #5a2333;
 }
-
-
 /* Footer */
 .footer {
   background-color: #2D2D2D;
@@ -400,7 +396,341 @@ body {
 .footer-link i {
   margin-right: 0.5rem;
 }
+@media screen and (max-width: 320px) {
+  body {
+    background-color: #fff;
+    box-sizing: border-box;
+    margin: 0 -55px 55px; /* Remove margens padrão */
+    padding: 0;
+  }
+
+  .relative {
+    position: relative; /* Para posicionamento relativo se necessário */
+  }
+
+  .navigation {
+    height: 100px; /* Ajuste conforme necessário */
+    width: 100%;
+    display: flex; /* Alinha logo e menu horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between; /* Espaça logo e menu */
+    align-items: center; /* Alinha verticalmente ao centro */
+    width: 100%; /* Garante que o contêiner use toda a largura */
+  }
+  .navigation ul li .icon {
+    font-size: 10px; /* Ajuste o tamanho do ícone conforme necessário */
+    width: 24px; /* Tamanho fixo, se necessário */
+    height: 24px; /* Tamanho fixo, se necessário */
+  }
+  .navigation ul li .text {
+    font-size: 14px; /* Ajuste o tamanho do texto conforme necessário */
+  }
+
+  .navigation img {
+    display: none;
+  }
+
+  .navigation ul {
+    display: flex; /* Usando flexbox */
+    flex-wrap: nowrap; /* Evita quebra de linha */
+    padding: 0; /* Remove padding padrão */
+    margin: 0; /* Remove margens padrão */
+    list-style: none;
+    font-size: 14px; /* Remove o estilo de marcador */
+  }
+
+  .navigation ul li {
+    margin-left: -25px; /* Espaçamento entre os itens */
+  }
+
+  .navigation ul li:last-child {
+    margin-right: 0; /* Remove margem do último item */
+  }
+
+  .navigation ul li a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Herda a cor do texto */
+    display: flex; /* Para alinhar ícone e texto */
+    align-items: center;
+    width: 100px;
+    margin-left: 65px; /* Alinha verticalmente ícone e texto */
+  }
+
+  .cards-container {
+    display: block; /* Se necessário */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+
+  .relative {
+    position: relative; /* Para posicionamento relativo se necessário */
+  }
+
+  .navigation {
+    height: 100px; /* Ajuste conforme necessário */
+    width: 100%;
+    display: flex; /* Alinha logo e menu horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between; /* Espaça logo e menu */
+    align-items: center; /* Alinha verticalmente ao centro */
+    width: 100%; /* Garante que o contêiner use toda a largura */
+  }
+  .navigation ul li .icon {
+    font-size: 10px; /* Ajuste o tamanho do ícone conforme necessário */
+    width: 24px; /* Tamanho fixo, se necessário */
+    height: 24px; /* Tamanho fixo, se necessário */
+  }
+  .navigation ul li .text {
+    font-size: 14px; /* Ajuste o tamanho do texto conforme necessário */
+  }
+
+  .navigation img {
+    display: none;
+  }
+
+  .navigation ul {
+    display: flex; /* Usando flexbox */
+    flex-wrap: nowrap; /* Evita quebra de linha */
+    padding: 0; /* Remove padding padrão */
+    margin: 0; /* Remove margens padrão */
+    list-style: none;
+    font-size: 14px; /* Remove o estilo de marcador */
+  }
+
+  .navigation ul li {
+    margin-left: 10px; /* Espaçamento entre os itens */
+  }
+
+  .navigation ul li:last-child {
+    margin-right: 0; /* Remove margem do último item */
+  }
+
+  .navigation ul li a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Herda a cor do texto */
+    display: flex; /* Para alinhar ícone e texto */
+    align-items: center;
+    margin-left: 80px;/* Alinha verticalmente ícone e texto */
+  }
+
+  .cards-container {
+    display: block; /* Se necessário */
+  }
+
+}
+@media (max-width: 640px) {
+  body {
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+
+  .relative {
+    position: relative; /* Para posicionamento relativo se necessário */
+  }
+
+  .navigation {
+    height: 100px; /* Ajuste conforme necessário */
+    width: 100%;
+    display: flex; /* Alinha logo e menu horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between; /* Espaça logo e menu */
+    align-items: center; /* Alinha verticalmente ao centro */
+    width: 100%; /* Garante que o contêiner use toda a largura */
+  }
+  .navigation ul li .icon {
+    font-size: 10px; /* Ajuste o tamanho do ícone conforme necessário */
+    width: 24px; /* Tamanho fixo, se necessário */
+    height: 24px; /* Tamanho fixo, se necessário */
+  }
+  .navigation ul li .text {
+    font-size: 14px; /* Ajuste o tamanho do texto conforme necessário */
+  }
+
+  .navigation img {
+    width: 50%;
+  }
+
+  .navigation ul {
+    display: flex; /* Usando flexbox */
+    flex-wrap: nowrap; /* Evita quebra de linha */
+    padding: 0; /* Remove padding padrão */
+    margin: 0; /* Remove margens padrão */
+    list-style: none;
+    font-size: 14px; /* Remove o estilo de marcador */
+  }
+
+  .navigation ul li {
+    margin-left: -25px; /* Espaçamento entre os itens */
+  }
+
+  .navigation ul li:last-child {
+    margin-right: 0; /* Remove margem do último item */
+  }
+
+  .navigation ul li a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Herda a cor do texto */
+    display: flex; /* Para alinhar ícone e texto */
+    align-items: center;
+    ; /* Alinha verticalmente ícone e texto */
+  }
+
+  .cards-container {
+    display: block; /* Se necessário */
+  }
 
 }
 
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+
+  .relative {
+    position: relative; /* Para posicionamento relativo se necessário */
+  }
+
+  .navigation {
+    height: 100px; /* Ajuste conforme necessário */
+    width: 100%;
+    display: flex; /* Alinha logo e menu horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between; /* Espaça logo e menu */
+    align-items: center; /* Alinha verticalmente ao centro */
+    width: 100%; /* Garante que o contêiner use toda a largura */
+  }
+  .navigation ul li .icon {
+    font-size: 10px; /* Ajuste o tamanho do ícone conforme necessário */
+    width: 24px; /* Tamanho fixo, se necessário */
+    height: 24px; /* Tamanho fixo, se necessário */
+  }
+  .navigation ul li .text {
+    font-size: 14px; /* Ajuste o tamanho do texto conforme necessário */
+  }
+
+  .navigation img {
+    width: 50%;
+  }
+
+  .navigation ul {
+    display: flex; /* Usando flexbox */
+    flex-wrap: nowrap; /* Evita quebra de linha */
+    padding: 0; /* Remove padding padrão */
+    margin: 0; /* Remove margens padrão */
+    list-style: none;
+    font-size: 14px; /* Remove o estilo de marcador */
+  }
+
+  .navigation ul li {
+    margin-left: -25px; /* Espaçamento entre os itens */
+  }
+
+  .navigation ul li:last-child {
+    margin-right: 0; /* Remove margem do último item */
+  }
+
+  .navigation ul li a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Herda a cor do texto */
+    display: flex; /* Para alinhar ícone e texto */
+    align-items: center;
+    ; /* Alinha verticalmente ícone e texto */
+  }
+
+  .cards-container {
+    display: block; /* Se necessário */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+
+  .relative {
+    position: relative; /* Para posicionamento relativo se necessário */
+  }
+
+  .navigation {
+    height: 100px; /* Ajuste conforme necessário */
+    width: 100%;
+    display: flex; /* Alinha logo e menu horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between; /* Espaça logo e menu */
+    align-items: center; /* Alinha verticalmente ao centro */
+    width: 100%; /* Garante que o contêiner use toda a largura */
+  }
+  .navigation ul li .icon {
+    font-size: 10px; /* Ajuste o tamanho do ícone conforme necessário */
+    width: 24px; /* Tamanho fixo, se necessário */
+    height: 24px; /* Tamanho fixo, se necessário */
+  }
+  .navigation ul li .text {
+    font-size: 14px; /* Ajuste o tamanho do texto conforme necessário */
+  }
+
+  .navigation img {
+    width: 25%;
+  }
+
+  .navigation ul {
+    display: flex; /* Usando flexbox */
+    flex-wrap: nowrap; /* Evita quebra de linha */
+    padding: 0; /* Remove padding padrão */
+    margin: 0; /* Remove margens padrão */
+    list-style: none;
+    font-size: 14px; /* Remove o estilo de marcador */
+  }
+
+  .navigation ul li {
+    margin-left: -25px; /* Espaçamento entre os itens */
+  }
+
+  .navigation ul li:last-child {
+    margin-right: 0; /* Remove margem do último item */
+  }
+
+  .navigation ul li a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Herda a cor do texto */
+    display: flex; /* Para alinhar ícone e texto */
+    align-items: center;
+    ; /* Alinha verticalmente ícone e texto */
+  }
+
+  .cards-container {
+    display: block; /* Se necessário */
+  }
+}
+
+
+  
   

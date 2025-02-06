@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
 /* Reset e Estilos Básicos */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
 }
 
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
 :root{
   --color-one: #6F2C3E;
   --color-two: #fff;
@@ -17,17 +17,13 @@
   --color-fowr:  #4A4A4A;
   --color-five: #333;
   --color-six: #FFD700;
-  --color-seven: #f4f4f4;
-
 }
 
-body {
-  background-color: var(--color-seven);
-  color: var(--color-fowr);
-  
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
 }
-
-
 
 /* Navbar */
 .navigation {
@@ -40,11 +36,11 @@ body {
   justify-content: space-between;
 }
 .navigation img {
-  width:250px;
-  padding: 12px;
-  margin: 22px;
-  
+  width: 250px;
+    margin: 22px;
+    padding: 12px;
 }
+
 
 
 .navigation ul{
@@ -53,11 +49,10 @@ body {
   margin-left: 660px;
 }
 
-
 .navigation ul li{
   position: relative;
   list-style: none;
-  width: 6rem;
+  width: 4.5rem;
   height: 70px;
   z-index: 1;
 }
@@ -87,7 +82,7 @@ body {
 }
 
 .navigation ul li:hover a .icon{
-  transform: translateY(-35px);  color: var(--color-six);
+  transform: translateY(-35px);  color: #FFD700;
 }
 
 .navigation ul li a .text{
@@ -131,8 +126,9 @@ transform: translateY(10px);
   color: var(--color-tree);
 }
 
-/* Seção "Sobre Nós" */
+
 /* Estilo geral da seção "Sobre Nós" */
+
 .sobre-nos {
   padding: 40px 20px;
   background-color: #f9f9f9;
@@ -143,8 +139,6 @@ transform: translateY(10px);
   font-size: 2rem;
   color: #6f2c3e;
   margin-bottom: 20px;
-  font-size: 50px;
-  text-transform: uppercase;
 }
 
 .descricao {
@@ -226,7 +220,7 @@ transform: translateY(10px);
 /* Grid e Cards */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  grid-template-columns: repeat(2, 2fr); /* 3 colunas */
   justify-content: center;
   gap: 2rem;
   margin-top: 2.5rem;
@@ -243,6 +237,10 @@ transform: translateY(10px);
   text-align: left;
   width: 100%;
   max-width: 300px;
+}
+.card-icon {
+  font-size: 2rem;
+  color: #6F2C3E; /* Cor principal do site */
 }
 
 .card:hover {
@@ -409,5 +407,618 @@ transform: translateY(10px);
 
 .btn-acao:hover {
   background-color: #8e4a62;
+}
+/* Responsividade para múltiplos tamanhos de tela */
+
+/* Telas muito pequenas (até 320px) */
+@media screen and (max-width: 320px) {
+  body {
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+
+  .navigation {
+    height: 80px; /* Altura reduzida para dispositivos menores */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .navigation ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .navigation ul li {
+    margin-left: 10px; /* Espaçamento reduzido entre os itens */
+    list-style: none;
+  }
+
+  .navigation ul li .icon {
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .navigation ul li .text {
+    font-size: 12px;
+  }
+
+  .navigation img {
+    display: none;
+  }
+
+  .navigation ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+  }
+
+  #areas-de-atuacao {
+    padding: 10px;
+    display: grid;
+  }
+
+  #areas-de-atuacao .container {
+    display: grid;
+    margin: 0 auto;
+  }
+
+  #areas-de-atuacao .grid {
+    display: grid;
+    flex-direction: column; /* Garante que os cards fiquem empilhados */
+    gap: 15px; /* Espaçamento entre os cards */
+  }
+
+  #areas-de-atuacao .card {
+    width: 100%; /* Ajusta os cards para ocupar toda a largura */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  #areas-de-atuacao h3 {
+    font-size: 18px;
+  }
+
+  #areas-de-atuacao p {
+    font-size: 14px;
+  }
+
+  #areas-de-atuacao ul {
+    padding-left: 20px;
+  }
+
+  #areas-de-atuacao ul li {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .card-icon {
+    font-size: 20px;
+    margin-right: 8px;
+  }
+
+  .card-titulo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+
+  .relative {
+    position: relative; /* Para posicionamento relativo se necessário */
+  }
+
+  .navigation {
+    height: 100px; /* Ajuste conforme necessário */
+    width: 110%;
+    display: flex; /* Alinha logo e menu horizontalmente */
+    align-items: center;
+    margin-left: 22px; /* Alinha verticalmente ao centro */
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between; /* Espaça logo e menu */
+    align-items: center; /* Alinha verticalmente ao centro */
+    width: 100%; /* Garante que o contêiner use toda a largura */
+  }
+  .navigation ul li .icon {
+    font-size: 10px; /* Ajuste o tamanho do ícone conforme necessário */
+    width: 24px; /* Tamanho fixo, se necessário */
+    height: 24px; /* Tamanho fixo, se necessário */
+  }
+  .navigation ul li .text {
+    font-size: 14px; /* Ajuste o tamanho do texto conforme necessário */
+  }
+
+  .navigation img {
+    display: none;
+  }
+
+  
+
+  .navigation ul li {
+    margin-left: 45%; /* Espaçamento entre os itens */
+  }
+
+  .navigation ul li:last-child {
+    margin-right: 0; /* Remove margem do último item */
+  }
+
+  .navigation ul li a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Herda a cor do texto */
+    display: flex; /* Para alinhar ícone e texto */
+    align-items: center;
+    margin-left: 65%;/* Alinha verticalmente ícone e texto */
+  }
+
+  .container {
+    display: block; /* Se necessário */
+    margin-left: 75px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+}
+@media (max-width: 640px) {
+  body {
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+
+  .relative {
+    position: relative; /* Para posicionamento relativo se necessário */
+  }
+
+  .navigation {
+    height: 100px; /* Ajuste conforme necessário */
+    width: 100%;
+    display: flex; /* Alinha logo e menu horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between; /* Espaça logo e menu */
+    align-items: center; /* Alinha verticalmente ao centro */
+    width: 100%; /* Garante que o contêiner use toda a largura */
+  }
+  .navigation ul li .icon {
+    font-size: 10px; /* Ajuste o tamanho do ícone conforme necessário */
+    width: 24px; /* Tamanho fixo, se necessário */
+    height: 24px; /* Tamanho fixo, se necessário */
+  }
+  .navigation ul li .text {
+    font-size: 14px; /* Ajuste o tamanho do texto conforme necessário */
+  }
+
+  .navigation img {
+    width: 50%;
+  }
+
+  .navigation ul {
+    display: flex; /* Usando flexbox */
+    flex-wrap: nowrap; /* Evita quebra de linha */
+    padding: 0; /* Remove padding padrão */
+    margin: 0; /* Remove margens padrão */
+    list-style: none;
+    font-size: 14px; /* Remove o estilo de marcador */
+  }
+
+  .navigation ul li {
+    margin-left: -45px; /* Espaçamento entre os itens */
+  }
+
+  .navigation ul li:last-child {
+    margin-right: 0; /* Remove margem do último item */
+  }
+
+  .navigation ul li a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Herda a cor do texto */
+    display: flex; /* Para alinhar ícone e texto */
+    align-items: center;
+    margin-left: -70px; /* Alinha verticalmente ícone e texto */
+  }
+  #sobre-nos {
+    padding: 20px;
+  }
+
+  #sobre-nos .missao-valores {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #sobre-nos .missao, 
+  #sobre-nos .valores {
+    text-align: center;
+  }
+
+  #sobre-nos h2.titulo {
+    font-size: 28px;
+  }
+
+  #sobre-nos p.descricao {
+    font-size: 16px;
+  }
+
+  #sobre-nos .missao-titulo,
+  #sobre-nos .valores-titulo {
+    font-size: 24px;
+  }
+
+  #sobre-nos .missao-descricao {
+    font-size: 14px;
+  }
+
+  #sobre-nos .valores-lista {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  #sobre-nos .valores-lista li {
+    font-size: 16px;
+    padding: 5px 0;
+  }
+  #areas-de-atuacao {
+    padding: 20px;
+  }
+
+  #areas-de-atuacao .titulo {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  #areas-de-atuacao .descricao {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #areas-de-atuacao .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #areas-de-atuacao .grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Coluna única para melhor adaptação */
+    gap: 20px;
+  }
+
+  #areas-de-atuacao .card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: left;
+  }
+
+  #areas-de-atuacao .card-titulo {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  #areas-de-atuacao .card-icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  #areas-de-atuacao .card-descricao {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  #areas-de-atuacao ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+
+  #areas-de-atuacao ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .cards-container {
+    display: block; /* Se necessário */
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+
+  .relative {
+    position: relative; /* Para posicionamento relativo se necessário */
+  }
+
+  .navigation {
+    height: 100px; /* Ajuste conforme necessário */
+    width: 100%;
+    display: flex; /* Alinha logo e menu horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between; /* Espaça logo e menu */
+    align-items: center; /* Alinha verticalmente ao centro */
+    width: 100%; /* Garante que o contêiner use toda a largura */
+  }
+  .navigation ul li .icon {
+    font-size: 10px; /* Ajuste o tamanho do ícone conforme necessário */
+    width: 24px; /* Tamanho fixo, se necessário */
+    height: 24px; /* Tamanho fixo, se necessário */
+  }
+  .navigation ul li .text {
+    font-size: 14px; /* Ajuste o tamanho do texto conforme necessário */
+  }
+
+  .navigation img {
+    width: 50%;
+  }
+
+  .navigation ul {
+    display: flex; /* Usando flexbox */
+    flex-wrap: nowrap; /* Evita quebra de linha */
+    padding: 0; /* Remove padding padrão */
+    margin: 0; /* Remove margens padrão */
+    list-style: none;
+    font-size: 14px; /* Remove o estilo de marcador */
+  }
+
+  .navigation ul li {
+    margin-left: -25px; /* Espaçamento entre os itens */
+  }
+
+  .navigation ul li:last-child {
+    margin-right: 0; /* Remove margem do último item */
+  }
+
+  .navigation ul li a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Herda a cor do texto */
+    display: flex; /* Para alinhar ícone e texto */
+    align-items: center;
+    ; /* Alinha verticalmente ícone e texto */
+  }
+
+  .cards-container {
+    display: block; /* Se necessário */
+  }
+  #areas-de-atuacao {
+    padding: 30px 15px;
+  }
+
+  #areas-de-atuacao .titulo {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  #areas-de-atuacao .descricao {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  #areas-de-atuacao .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #areas-de-atuacao .grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Cards em uma coluna no modo responsivo */
+    gap: 25px;
+  }
+
+  #areas-de-atuacao .card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  #areas-de-atuacao .card-titulo {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  #areas-de-atuacao .card-icon {
+    font-size: 26px;
+    margin-right: 12px;
+  }
+
+  #areas-de-atuacao .card-descricao {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  #areas-de-atuacao ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+
+  #areas-de-atuacao ul li {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+
+  .relative {
+    position: relative; /* Para posicionamento relativo se necessário */
+  }
+
+  .navigation {
+    height: 100px; /* Ajuste conforme necessário */
+    width: 100%;
+    display: flex; /* Alinha logo e menu horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between; /* Espaça logo e menu */
+    align-items: center; /* Alinha verticalmente ao centro */
+    width: 100%; /* Garante que o contêiner use toda a largura */
+  }
+  .navigation ul li .icon {
+    font-size: 10px; /* Ajuste o tamanho do ícone conforme necessário */
+    width: 24px; /* Tamanho fixo, se necessário */
+    height: 24px; /* Tamanho fixo, se necessário */
+  }
+  .navigation ul li .text {
+    font-size: 14px; /* Ajuste o tamanho do texto conforme necessário */
+  }
+
+  .navigation img {
+    width: 25%;
+  }
+
+  .navigation ul {
+    display: flex; /* Usando flexbox */
+    flex-wrap: nowrap; /* Evita quebra de linha */
+    padding: 0; /* Remove padding padrão */
+    margin: 0; /* Remove margens padrão */
+    list-style: none;
+    font-size: 14px; /* Remove o estilo de marcador */
+  }
+
+  .navigation ul li {
+    margin-left: -25px; /* Espaçamento entre os itens */
+  }
+
+  .navigation ul li:last-child {
+    margin-right: 0; /* Remove margem do último item */
+  }
+
+  .navigation ul li a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Herda a cor do texto */
+    display: flex; /* Para alinhar ícone e texto */
+    align-items: center;
+    ; /* Alinha verticalmente ícone e texto */
+  }
+
+  .cards-container {
+    display: block; /* Se necessário */
+  }
+  #areas-de-atuacao {
+    padding: 40px 20px;
+  }
+
+  #areas-de-atuacao .titulo {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  #areas-de-atuacao .descricao {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  #areas-de-atuacao .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #areas-de-atuacao .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    gap: 30px;
+  }
+
+  #areas-de-atuacao .card {
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  #areas-de-atuacao .card-titulo {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  #areas-de-atuacao .card-icon {
+    font-size: 28px;
+    margin-right: 12px;
+  }
+
+  #areas-de-atuacao .card-descricao {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  #areas-de-atuacao ul {
+    padding-left: 25px;
+    list-style-type: disc;
+  }
+
+  #areas-de-atuacao ul li {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
